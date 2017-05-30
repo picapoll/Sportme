@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="row resultsbackground">
+        <div>
+            <h2>Search Results from <stong>{{city}} to Barcelona for {{departureDate}}</stong></h2>
+            <div class="col-md-12 headerresults">
+                <table class="table table-list-search">
+                    <thead>
+                        <tr>
+                            <th>Distance</th>
+                            <th>Ascent</th>
+                            <th>Name</th>
+                            <th>City</th>
+                            <th>map</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="flight in listflights">
+                            <td><strong> € {{flight.total_price}}</strong></td>
+                            <td>{{flight.flight_number}}</td>
+                            <td><span class="glyphicon glyphicon-time" aria-hidden="true"></span> <strong> {{flight.departs_at}}</strong> </td>
+                            <td>{{flight.arrives_at}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

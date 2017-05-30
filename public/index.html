@@ -1,14 +1,32 @@
 <!DOCTYPE html>
 <html lang="en" ng-app>
-<head>
-  <meta charset="UTF-8">
-  <title>Document</title>
-  <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js'></script>
-</head>
-<body>
-  <h1>Hello World! {{ 4 + 5 }}</h1>
-  <script>
 
-  </script>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js'></script>
+    <!-- <link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap.css"> -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+</head>
+
+<body>
+    <h1>Hello World! {{ 4 + 5 }}</h1>
+    <input id="searchInput" class="controls" type="text" placeholder="Enter a location">
+    <div id="map"></div>
+    <ul id="geoData">
+        <li>Full Address: <span id="location"></span></li>
+        <li>Postal Code: <span id="postal_code"></span></li>
+        <li>Country: <span id="country"></span></li>
+        <li>Latitude: <span id="lat"></span></li>
+        <li>Longitude: <span id="lon"></span></li>
+    </ul>
+    <input type="button" onclick="getRoutes()" value="getRoutes">
+    </form>
+    <script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDSSp8B9OhUoIUBtthy0hx22xE5mIBVRPE&libraries=places&callback=initMap' async defer /> </script>
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src='js/map.js'></script>
+    <script type="text/javascript" src='js/services.js'></script>
 </body>
+
 </html>
