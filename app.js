@@ -1,6 +1,8 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
+const path = require('path')
+
 const app = express()
 
 if (process.env.NODE_ENV !== 'production') {
@@ -15,7 +17,7 @@ const dbUrl = process.env.DB_URL
 console.log(dbUrl)
 const port = process.env.PORT
 
-app.use(express.static('../public'))
+app.use(express.static(path.join(__dirname, '/public')))
 // mongoose.Promise = Promise
 // mongoose.connect(dbUrl)
 

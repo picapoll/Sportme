@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node server/app",
-    "dev": "nodemon server/app"
+    "start": "node app",
+    "dev": "nodemon app"
   },
   "author": "",
   "license": "ISC",
@@ -14,7 +14,8 @@
     "bower": "^1.8.0",
     "dotenv": "^4.0.0",
     "express": "^4.15.3",
-    "mongoose": "^4.10.3"
+    "mongoose": "^4.10.3",
+    "path": "^0.12.7"
   },
   "devDependencies": {
     "dotenv": "^4.0.0"
