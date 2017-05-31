@@ -4,15 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node app",
-    "dev": "nodemon server/app.js"
+    "start": "node server/app",
+    "dev": "nodemon server/app"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.17.2",
     "bower": "^1.8.0",
-    "dotenv": "^4.0.0",
+    "dotenv": "^4.0.0",c
     "express": "^4.15.3",
     "mongoose": "^4.10.3"
   }

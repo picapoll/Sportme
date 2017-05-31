@@ -1,0 +1,20 @@
+{
+  "name": "project",
+  "homepage": "https://github.com/picapoll/sportme",
+  "authors": [
+    "Bernat Moragas <bmoragas@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1"
+  }
+}
