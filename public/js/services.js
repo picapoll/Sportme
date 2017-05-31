@@ -15,7 +15,7 @@
    }
 
          // var appikey = 'sFKou9NvWJAiRC7ddjqmX4tXJGAQNYMG'
-   var url = 'https://oauth2-api.mapmyapi.com/v7.1/route/?close_to_location=' + lat + '%2C' + long + '&maximum_distance=5000&minimum_distance=1'
+   var url = 'https://oauth2-api.mapmyapi.com/v7.1/route/?close_to_location=' + lat + '%2C ' + long + '&maximum_distance=5000&minimum_distance=1'
    console.log('getRoutesCloseby')
    console.log(url)
    console.log(lat)

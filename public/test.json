@@ -1,0 +1,1412 @@
+{
+  "_links": {
+    "self": [
+      {
+        "href": "/v7.1/route/?limit=20&minimum_distance=2000&close_to_location=41.38506389999999%2C2.1734034999999494&maximum_distance=10000&offset=0"
+      }
+    ],
+    "documentation": [
+      {
+        "href": "https://developer.underarmour.com/docs/v71_Route"
+      }
+    ],
+    "next": [
+      {
+        "href": "/v7.1/route/?limit=20&minimum_distance=2000&close_to_location=41.38506389999999%2C2.1734034999999494&maximum_distance=10000&offset=20"
+      }
+    ]
+  },
+  "_embedded": {
+    "routes": [
+      {
+        "total_descent": -13.7626216876,
+        "city": "Barcelona",
+        "data_source": null,
+        "description": "",
+        "updated_datetime": "2013-05-27T06:50:01+00:00",
+        "created_datetime": "2013-05-27T06:50:01+00:00",
+        "country": "es",
+        "start_point_type": "",
+        "starting_location": {
+          "type": "Point",
+          "coordinates": [
+            2.173226,
+            41.385015
+          ]
+        },
+        "distance": 2203.97,
+        "name": "2.20km walk on 27/05/13",
+        "climbs": null,
+        "state": "",
+        "max_elevation": 32.12,
+        "postal_code": "08007",
+        "min_elevation": 14.94,
+        "images": [],
+        "_links": {
+          "activity_types": [
+            {
+              "href": "/v7.1/activity_type/9/",
+              "id": "9"
+            }
+          ],
+          "privacy": [
+            {
+              "href": "/v7.1/privacy_option/3/",
+              "id": "3"
+            }
+          ],
+          "self": [
+            {
+              "href": "/v7.1/route/215553747/",
+              "id": "215553747"
+            }
+          ],
+          "alternate": [
+            {
+              "href": "/v7.1/route/215553747/?format=kml&field_set=detailed",
+              "id": "215553747",
+              "name": "kml"
+            },
+            {
+              "href": "/v7.1/route/215553747/?format=gpx&field_set=detailed",
+              "id": "215553747",
+              "name": "gpx"
+            }
+          ],
+          "user": [
+            {
+              "href": "/v7.1/user/31849679/",
+              "id": "31849679"
+            }
+          ],
+          "thumbnail": [
+            {
+              "href": "//drzetlglcbfx.cloudfront.net/routes/thumbnail/215553747/1369637401?size=100x100"
+            }
+          ]
+        },
+        "points": null,
+        "total_ascent": 3.5521937194
+      },
+      {
+        "total_descent": -6.9249196992,
+        "city": "Barcelona",
+        "data_source": null,
+        "description": "",
+        "updated_datetime": "2013-05-25T10:08:48+00:00",
+        "created_datetime": "2013-05-25T10:08:48+00:00",
+        "country": "es",
+        "start_point_type": "",
+        "starting_location": {
+          "type": "Point",
+          "coordinates": [
+            2.17322,
+            41.384986
+          ]
+        },
+        "distance": 2717.32,
+        "name": "2.72km walk on 25/05/13",
+        "climbs": null,
+        "state": "",
+        "max_elevation": 29.01,
+        "postal_code": "08001",
+        "min_elevation": 20.68,
+        "images": [],
+        "_links": {
+          "activity_types": [
+            {
+              "href": "/v7.1/activity_type/9/",
+              "id": "9"
+            }
+          ],
+          "privacy": [
+            {
+              "href": "/v7.1/privacy_option/3/",
+              "id": "3"
+            }
+          ],
+          "self": [
+            {
+              "href": "/v7.1/route/214511603/",
+              "id": "214511603"
+            }
+          ],
+          "alternate": [
+            {
+              "href": "/v7.1/route/214511603/?format=kml&field_set=detailed",
+              "id": "214511603",
+              "name": "kml"
+            },
+            {
+              "href": "/v7.1/route/214511603/?format=gpx&field_set=detailed",
+              "id": "214511603",
+              "name": "gpx"
+            }
+          ],
+          "user": [
+            {
+              "href": "/v7.1/user/31849679/",
+              "id": "31849679"
+            }
+          ],
+          "thumbnail": [
+            {
+              "href": "//drzetlglcbfx.cloudfront.net/routes/thumbnail/214511603/1369476528?size=100x100"
+            }
+          ]
+        },
+        "points": null,
+        "total_ascent": 5.2812380835
+      },
+      {
+        "total_descent": -28.3602453431,
+        "city": "Ciutat Vella",
+        "data_source": "api3:",
+        "description": "",
+        "updated_datetime": "2014-05-24T11:05:54+00:00",
+        "created_datetime": "2014-05-24T11:05:54+00:00",
+        "country": "es",
+        "start_point_type": "",
+        "starting_location": {
+          "type": "Point",
+          "coordinates": [
+            2.173762,
+            41.385073
+          ]
+        },
+        "distance": 3293.88,
+        "name": "3.29km fixed gear (fixie) on 24/05/14",
+        "climbs": null,
+        "state": "56",
+        "max_elevation": 31.3,
+        "postal_code": "",
+        "min_elevation": 3.56,
+        "images": [],
+        "_links": {
+          "activity_types": [
+            {
+              "href": "/v7.1/activity_type/11/",
+              "id": "11"
+            }
+          ],
+          "privacy": [
+            {
+              "href": "/v7.1/privacy_option/3/",
+              "id": "3"
+            }
+          ],
+          "self": [
+            {
+              "href": "/v7.1/route/424295514/",
+              "id": "424295514"
+            }
+          ],
+          "alternate": [
+            {
+              "href": "/v7.1/route/424295514/?format=kml&field_set=detailed",
+              "id": "424295514",
+              "name": "kml"
+            },
+            {
+              "href": "/v7.1/route/424295514/?format=gpx&field_set=detailed",
+              "id": "424295514",
+              "name": "gpx"
+            }
+          ],
+          "user": [
+            {
+              "href": "/v7.1/user/48829424/",
+              "id": "48829424"
+            }
+          ],
+          "thumbnail": [
+            {
+              "href": "//drzetlglcbfx.cloudfront.net/routes/thumbnail/424295514/1400929554?size=100x100"
+            }
+          ]
+        },
+        "points": null,
+        "total_ascent": 13.4865892705
+      },
+      {
+        "total_descent": -3.2654742455,
+        "city": "Barcelona",
+        "data_source": null,
+        "description": "",
+        "updated_datetime": "2013-06-01T11:02:00+00:00",
+        "created_datetime": "2013-06-01T11:02:00+00:00",
+        "country": "es",
+        "start_point_type": "",
+        "starting_location": {
+          "type": "Point",
+          "coordinates": [
+            2.173689,
+            41.385239
+          ]
+        },
+        "distance": 2071.18,
+        "name": "2.07km walk on 01/06/13",
+        "climbs": null,
+        "state": "",
+        "max_elevation": 38.15,
+        "postal_code": "08007",
+        "min_elevation": 25.82,
+        "images": [],
+        "_links": {
+          "activity_types": [
+            {
+              "href": "/v7.1/activity_type/9/",
+              "id": "9"
+            }
+          ],
+          "privacy": [
+            {
+              "href": "/v7.1/privacy_option/3/",
+              "id": "3"
+            }
+          ],
+          "self": [
+            {
+              "href": "/v7.1/route/218551701/",
+              "id": "218551701"
+            }
+          ],
+          "alternate": [
+            {
+              "href": "/v7.1/route/218551701/?format=kml&field_set=detailed",
+              "id": "218551701",
+              "name": "kml"
+            },
+            {
+              "href": "/v7.1/route/218551701/?format=gpx&field_set=detailed",
+              "id": "218551701",
+              "name": "gpx"
+            }
+          ],
+          "user": [
+            {
+              "href": "/v7.1/user/32365491/",
+              "id": "32365491"
+            }
+          ],
+          "thumbnail": [
+            {
+              "href": "//drzetlglcbfx.cloudfront.net/routes/thumbnail/218551701/1370084520?size=100x100"
+            }
+          ]
+        },
+        "points": null,
+        "total_ascent": 11.1021803684
+      },
+      {
+        "total_descent": -16.6634258386,
+        "city": "Barcelona",
+        "data_source": null,
+        "description": "",
+        "updated_datetime": "2011-05-31T13:34:43+00:00",
+        "created_datetime": "2011-05-31T13:34:43+00:00",
+        "country": "es",
+        "start_point_type": "",
+        "starting_location": {
+          "type": "Point",
+          "coordinates": [
+            2.173679,
+            41.385258
+          ]
+        },
+        "distance": 4758.31,
+        "name": "iMapMyRUN: 31 maj 2011 15:34",
+        "climbs": null,
+        "state": "",
+        "max_elevation": 76.85,
+        "postal_code": "08007",
+        "min_elevation": 24.96,
+        "images": [],
+        "_links": {
+          "activity_types": [
+            {
+              "href": "/v7.1/activity_type/9/",
+              "id": "9"
+            }
+          ],
+          "privacy": [
+            {
+              "href": "/v7.1/privacy_option/3/",
+              "id": "3"
+            }
+          ],
+          "self": [
+            {
+              "href": "/v7.1/route/35951002/",
+              "id": "35951002"
+            }
+          ],
+          "alternate": [
+            {
+              "href": "/v7.1/route/35951002/?format=kml&field_set=detailed",
+              "id": "35951002",
+              "name": "kml"
+            },
+            {
+              "href": "/v7.1/route/35951002/?format=gpx&field_set=detailed",
+              "id": "35951002",
+              "name": "gpx"
+            }
+          ],
+          "user": [
+            {
+              "href": "/v7.1/user/6628164/",
+              "id": "6628164"
+            }
+          ],
+          "thumbnail": [
+            {
+              "href": "//drzetlglcbfx.cloudfront.net/routes/thumbnail/35951002/1306848883?size=100x100"
+            }
+          ]
+        },
+        "points": null,
+        "total_ascent": 55.5451784569
+      },
+      {
+        "total_descent": -21.0184639138,
+        "city": "Barcelona",
+        "data_source": null,
+        "description": "",
+        "updated_datetime": "2013-10-27T13:44:30+00:00",
+        "created_datetime": "2013-10-27T13:44:30+00:00",
+        "country": "es",
+        "start_point_type": "",
+        "starting_location": {
+          "type": "Point",
+          "coordinates": [
+            2.173725,
+            41.385242
+          ]
+        },
+        "distance": 8187.87,
+        "name": "5.08mi walk on 10/14/13",
+        "climbs": null,
+        "state": "",
+        "max_elevation": 53.11,
+        "postal_code": "08007",
+        "min_elevation": 23.22,
+        "images": [],
+        "_links": {
+          "activity_types": [
+            {
+              "href": "/v7.1/activity_type/9/",
+              "id": "9"
+            }
+          ],
+          "privacy": [
+            {
+              "href": "/v7.1/privacy_option/3/",
+              "id": "3"
+            }
+          ],
+          "self": [
+            {
+              "href": "/v7.1/route/315818919/",
+              "id": "315818919"
+            }
+          ],
+          "alternate": [
+            {
+              "href": "/v7.1/route/315818919/?format=kml&field_set=detailed",
+              "id": "315818919",
+              "name": "kml"
+            },
+            {
+              "href": "/v7.1/route/315818919/?format=gpx&field_set=detailed",
+              "id": "315818919",
+              "name": "gpx"
+            }
+          ],
+          "user": [
+            {
+              "href": "/v7.1/user/32922315/",
+              "id": "32922315"
+            }
+          ],
+          "thumbnail": [
+            {
+              "href": "//drzetlglcbfx.cloudfront.net/routes/thumbnail/315818919/1382881470?size=100x100"
+            }
+          ]
+        },
+        "points": null,
+        "total_ascent": 42.7030681595
+      },
+      {
+        "total_descent": -60.4281194415,
+        "city": "Ciutat Vella",
+        "data_source": "GARMIN FR220",
+        "description": "",
+        "updated_datetime": "2016-04-03T20:30:28+00:00",
+        "created_datetime": "2016-04-03T20:30:20+00:00",
+        "country": "es",
+        "start_point_type": "",
+        "starting_location": {
+          "type": "Point",
+          "coordinates": [
+            2.1740880702,
+            41.3850174285
+          ]
+        },
+        "distance": 9707.67,
+        "name": "Route from GARMIN FR220 (2016-03-26 07:43:03+00:00)",
+        "climbs": null,
+        "state": "56",
+        "max_elevation": 31.55,
+        "postal_code": "",
+        "min_elevation": 3.02,
+        "images": [],
+        "_links": {
+          "activity_types": [
+            {
+              "href": "/v7.1/activity_type/16/",
+              "id": "16"
+            }
+          ],
+          "privacy": [
+            {
+              "href": "/v7.1/privacy_option/3/",
+              "id": "3"
+            }
+          ],
+          "self": [
+            {
+              "href": "/v7.1/route/1031696413/",
+              "id": "1031696413"
+            }
+          ],
+          "alternate": [
+            {
+              "href": "/v7.1/route/1031696413/?format=kml&field_set=detailed",
+              "id": "1031696413",
+              "name": "kml"
+            },
+            {
+              "href": "/v7.1/route/1031696413/?format=gpx&field_set=detailed",
+              "id": "1031696413",
+              "name": "gpx"
+            }
+          ],
+          "user": [
+            {
+              "href": "/v7.1/user/11118266/",
+              "id": "11118266"
+            }
+          ],
+          "thumbnail": [
+            {
+              "href": "//drzetlglcbfx.cloudfront.net/routes/thumbnail/1031696413/1459715428?size=100x100"
+            }
+          ]
+        },
+        "points": null,
+        "total_ascent": 46.7229940867
+      },
+      {
+        "total_descent": -55.6368983135,
+        "city": "Barcelona",
+        "data_source": "MapMyRun",
+        "description": "",
+        "updated_datetime": "2008-03-25T09:20:43+00:00",
+        "created_datetime": "2008-03-25T09:20:43+00:00",
+        "country": "es",
+        "start_point_type": "",
+        "starting_location": {
+          "type": "Point",
+          "coordinates": [
+            2.172921896,
+            41.3846897136
+          ]
+        },
+        "distance": 9784.81152,
+        "name": "Barca Walk",
+        "climbs": null,
+        "state": "",
+        "max_elevation": 38.68,
+        "postal_code": "",
+        "min_elevation": -0.17,
+        "images": [],
+        "_links": {
+          "activity_types": [
+            {
+              "href": "/v7.1/activity_type/9/",
+              "id": "9"
+            }
+          ],
+          "privacy": [
+            {
+              "href": "/v7.1/privacy_option/3/",
+              "id": "3"
+            }
+          ],
+          "self": [
+            {
+              "href": "/v7.1/route/2087823/",
+              "id": "2087823"
+            }
+          ],
+          "alternate": [
+            {
+              "href": "/v7.1/route/2087823/?format=kml&field_set=detailed",
+              "id": "2087823",
+              "name": "kml"
+            },
+            {
+              "href": "/v7.1/route/2087823/?format=gpx&field_set=detailed",
+              "id": "2087823",
+              "name": "gpx"
+            }
+          ],
+          "user": [
+            {
+              "href": "/v7.1/user/144675/",
+              "id": "144675"
+            }
+          ],
+          "thumbnail": [
+            {
+              "href": "//drzetlglcbfx.cloudfront.net/routes/thumbnail/2087823/1206436843?size=100x100"
+            }
+          ]
+        },
+        "points": null,
+        "total_ascent": 54.8766070421
+      },
+      {
+        "total_descent": -40.4499125432,
+        "city": "Barcelona",
+        "data_source": null,
+        "description": "",
+        "updated_datetime": "2013-06-29T19:33:17+00:00",
+        "created_datetime": "2013-06-29T19:33:17+00:00",
+        "country": "es",
+        "start_point_type": "",
+        "starting_location": {
+          "type": "Point",
+          "coordinates": [
+            2.172787,
+            41.384776
+          ]
+        },
+        "distance": 7814.91,
+        "name": "7.81km walk on 29/06/13",
+        "climbs": null,
+        "state": "",
+        "max_elevation": 65.96,
+        "postal_code": "08001",
+        "min_elevation": 24.06,
+        "images": [],
+        "_links": {
+          "activity_types": [
+            {
+              "href": "/v7.1/activity_type/9/",
+              "id": "9"
+            }
+          ],
+          "privacy": [
+            {
+              "href": "/v7.1/privacy_option/3/",
+              "id": "3"
+            }
+          ],
+          "self": [
+            {
+              "href": "/v7.1/route/236409581/",
+              "id": "236409581"
+            }
+          ],
+          "alternate": [
+            {
+              "href": "/v7.1/route/236409581/?format=kml&field_set=detailed",
+              "id": "236409581",
+              "name": "kml"
+            },
+            {
+              "href": "/v7.1/route/236409581/?format=gpx&field_set=detailed",
+              "id": "236409581",
+              "name": "gpx"
+            }
+          ],
+          "user": [
+            {
+              "href": "/v7.1/user/31849679/",
+              "id": "31849679"
+            }
+          ],
+          "thumbnail": [
+            {
+              "href": "//drzetlglcbfx.cloudfront.net/routes/thumbnail/236409581/1372534397?size=100x100"
+            }
+          ]
+        },
+        "points": null,
+        "total_ascent": 40.8731870527
+      },
+      {
+        "total_descent": -18.3719256358,
+        "city": "Eixample",
+        "data_source": "api3:",
+        "description": "",
+        "updated_datetime": "2014-09-30T15:06:11+00:00",
+        "created_datetime": "2014-09-30T15:06:11+00:00",
+        "country": "es",
+        "start_point_type": "",
+        "starting_location": {
+          "type": "Point",
+          "coordinates": [
+            2.1737205,
+            41.38455104
+          ]
+        },
+        "distance": 3147.3,
+        "name": "3.15 km walk on 30/09/2014",
+        "climbs": null,
+        "state": "56",
+        "max_elevation": 39.5,
+        "postal_code": "",
+        "min_elevation": 24.25,
+        "images": [],
+        "_links": {
+          "activity_types": [
+            {
+              "href": "/v7.1/activity_type/9/",
+              "id": "9"
+            }
+          ],
+          "privacy": [
+            {
+              "href": "/v7.1/privacy_option/3/",
+              "id": "3"
+            }
+          ],
+          "self": [
+            {
+              "href": "/v7.1/route/548073242/",
+              "id": "548073242"
+            }
+          ],
+          "alternate": [
+            {
+              "href": "/v7.1/route/548073242/?format=kml&field_set=detailed",
+              "id": "548073242",
+              "name": "kml"
+            },
+            {
+              "href": "/v7.1/route/548073242/?format=gpx&field_set=detailed",
+              "id": "548073242",
+              "name": "gpx"
+            }
+          ],
+          "user": [
+            {
+              "href": "/v7.1/user/32651629/",
+              "id": "32651629"
+            }
+          ],
+          "thumbnail": [
+            {
+              "href": "//drzetlglcbfx.cloudfront.net/routes/thumbnail/548073242/1412089571?size=100x100"
+            }
+          ]
+        },
+        "points": null,
+        "total_ascent": 17.9763143564
+      },
+      {
+        "total_descent": -0.5739654856,
+        "city": "Barcelona",
+        "data_source": null,
+        "description": "",
+        "updated_datetime": "2011-12-10T17:37:33+00:00",
+        "created_datetime": "2011-12-10T17:37:33+00:00",
+        "country": "es",
+        "start_point_type": "",
+        "starting_location": {
+          "type": "Point",
+          "coordinates": [
+            2.173924,
+            41.385578
+          ]
+        },
+        "distance": 2144.97,
+        "name": "iMapMyRUN: 10/12/2011 18:37",
+        "climbs": null,
+        "state": "",
+        "max_elevation": 39.97,
+        "postal_code": "08007",
+        "min_elevation": 24.39,
+        "images": [],
+        "_links": {
+          "self": [
+            {
+              "href": "/v7.1/route/60438782/",
+              "id": "60438782"
+            }
+          ],
+          "user": [
+            {
+              "href": "/v7.1/user/3127365/",
+              "id": "3127365"
+            }
+          ],
+          "alternate": [
+            {
+              "href": "/v7.1/route/60438782/?format=kml&field_set=detailed",
+              "id": "60438782",
+              "name": "kml"
+            },
+            {
+              "href": "/v7.1/route/60438782/?format=gpx&field_set=detailed",
+              "id": "60438782",
+              "name": "gpx"
+            }
+          ],
+          "thumbnail": [
+            {
+              "href": "//drzetlglcbfx.cloudfront.net/routes/thumbnail/60438782/1323538653?size=100x100"
+            }
+          ],
+          "privacy": [
+            {
+              "href": "/v7.1/privacy_option/3/",
+              "id": "3"
+            }
+          ]
+        },
+        "points": null,
+        "total_ascent": 13.4503227508
+      },
+      {
+        "total_descent": -10.4357549425,
+        "city": "Ciutat Vella",
+        "data_source": "api3:",
+        "description": "",
+        "updated_datetime": "2014-06-24T20:08:59+00:00",
+        "created_datetime": "2014-06-24T20:08:58+00:00",
+        "country": "es",
+        "start_point_type": "",
+        "starting_location": {
+          "type": "Point",
+          "coordinates": [
+            2.173034,
+            41.385648
+          ]
+        },
+        "distance": 4638.66,
+        "name": "2.88mi walk on 6/24/14",
+        "climbs": null,
+        "state": "56",
+        "max_elevation": 42.4,
+        "postal_code": "",
+        "min_elevation": 22.34,
+        "images": [],
+        "_links": {
+          "activity_types": [
+            {
+              "href": "/v7.1/activity_type/9/",
+              "id": "9"
+            }
+          ],
+          "privacy": [
+            {
+              "href": "/v7.1/privacy_option/3/",
+              "id": "3"
+            }
+          ],
+          "self": [
+            {
+              "href": "/v7.1/route/453517138/",
+              "id": "453517138"
+            }
+          ],
+          "alternate": [
+            {
+              "href": "/v7.1/route/453517138/?format=kml&field_set=detailed",
+              "id": "453517138",
+              "name": "kml"
+            },
+            {
+              "href": "/v7.1/route/453517138/?format=gpx&field_set=detailed",
+              "id": "453517138",
+              "name": "gpx"
+            }
+          ],
+          "user": [
+            {
+              "href": "/v7.1/user/49847782/",
+              "id": "49847782"
+            }
+          ],
+          "thumbnail": [
+            {
+              "href": "//drzetlglcbfx.cloudfront.net/routes/thumbnail/453517138/1403640539?size=100x100"
+            }
+          ]
+        },
+        "points": null,
+        "total_ascent": 23.1568259575
+      },
+      {
+        "total_descent": -31.146837282,
+        "city": "Barcelona",
+        "data_source": null,
+        "description": "",
+        "updated_datetime": "2014-01-04T13:41:27+00:00",
+        "created_datetime": "2014-01-04T13:41:27+00:00",
+        "country": "es",
+        "start_point_type": "",
+        "starting_location": {
+          "type": "Point",
+          "coordinates": [
+            2.17282468,
+            41.38457722
+          ]
+        },
+        "distance": 4746.2,
+        "name": "4.74 km hike on 04/01/2014",
+        "climbs": null,
+        "state": "",
+        "max_elevation": 34.05,
+        "postal_code": "08001",
+        "min_elevation": 0.88,
+        "images": [],
+        "_links": {
+          "activity_types": [
+            {
+              "href": "/v7.1/activity_type/24/",
+              "id": "24"
+            }
+          ],
+          "privacy": [
+            {
+              "href": "/v7.1/privacy_option/3/",
+              "id": "3"
+            }
+          ],
+          "self": [
+            {
+              "href": "/v7.1/route/341210039/",
+              "id": "341210039"
+            }
+          ],
+          "alternate": [
+            {
+              "href": "/v7.1/route/341210039/?format=kml&field_set=detailed",
+              "id": "341210039",
+              "name": "kml"
+            },
+            {
+              "href": "/v7.1/route/341210039/?format=gpx&field_set=detailed",
+              "id": "341210039",
+              "name": "gpx"
+            }
+          ],
+          "user": [
+            {
+              "href": "/v7.1/user/38088629/",
+              "id": "38088629"
+            }
+          ],
+          "thumbnail": [
+            {
+              "href": "//drzetlglcbfx.cloudfront.net/routes/thumbnail/341210039/1388842887?size=100x100"
+            }
+          ]
+        },
+        "points": null,
+        "total_ascent": 40.5420244707
+      },
+      {
+        "total_descent": -54.1532502151,
+        "city": "Barcelona",
+        "data_source": "MapMyRUN",
+        "description": "",
+        "updated_datetime": "2011-05-04T21:38:49+00:00",
+        "created_datetime": "2011-05-04T21:38:49+00:00",
+        "country": "es",
+        "start_point_type": "home",
+        "starting_location": {
+          "type": "Point",
+          "coordinates": [
+            2.1737265587,
+            41.385736168
+          ]
+        },
+        "distance": 6094.29,
+        "name": "A run mapped on 05/04/2011",
+        "climbs": null,
+        "state": "",
+        "max_elevation": 31.85,
+        "postal_code": "8002",
+        "min_elevation": 0.98,
+        "images": [],
+        "_links": {
+          "activity_types": [
+            {
+              "href": "/v7.1/activity_type/16/",
+              "id": "16"
+            }
+          ],
+          "privacy": [
+            {
+              "href": "/v7.1/privacy_option/3/",
+              "id": "3"
+            }
+          ],
+          "self": [
+            {
+              "href": "/v7.1/route/33411402/",
+              "id": "33411402"
+            }
+          ],
+          "alternate": [
+            {
+              "href": "/v7.1/route/33411402/?format=kml&field_set=detailed",
+              "id": "33411402",
+              "name": "kml"
+            },
+            {
+              "href": "/v7.1/route/33411402/?format=gpx&field_set=detailed",
+              "id": "33411402",
+              "name": "gpx"
+            }
+          ],
+          "user": [
+            {
+              "href": "/v7.1/user/6107678/",
+              "id": "6107678"
+            }
+          ],
+          "thumbnail": [
+            {
+              "href": "//drzetlglcbfx.cloudfront.net/routes/thumbnail/33411402/1304545129?size=100x100"
+            }
+          ]
+        },
+        "points": null,
+        "total_ascent": 55.8142573271
+      },
+      {
+        "total_descent": -37.1684005886,
+        "city": "Barcelona",
+        "data_source": null,
+        "description": "",
+        "updated_datetime": "2012-07-15T05:34:53+00:00",
+        "created_datetime": "2012-07-15T05:34:53+00:00",
+        "country": "es",
+        "start_point_type": "",
+        "starting_location": {
+          "type": "Point",
+          "coordinates": [
+            2.174239,
+            41.384682
+          ]
+        },
+        "distance": 5110.04,
+        "name": "3.17 mi Run in Barcelona on Jul 15, 2012 7:34 AM",
+        "climbs": null,
+        "state": "CA",
+        "max_elevation": 38.42,
+        "postal_code": "",
+        "min_elevation": 2.01,
+        "images": [],
+        "_links": {
+          "self": [
+            {
+              "href": "/v7.1/route/113462297/",
+              "id": "113462297"
+            }
+          ],
+          "user": [
+            {
+              "href": "/v7.1/user/28205/",
+              "id": "28205"
+            }
+          ],
+          "alternate": [
+            {
+              "href": "/v7.1/route/113462297/?format=kml&field_set=detailed",
+              "id": "113462297",
+              "name": "kml"
+            },
+            {
+              "href": "/v7.1/route/113462297/?format=gpx&field_set=detailed",
+              "id": "113462297",
+              "name": "gpx"
+            }
+          ],
+          "thumbnail": [
+            {
+              "href": "//drzetlglcbfx.cloudfront.net/routes/thumbnail/113462297/1342330493?size=100x100"
+            }
+          ],
+          "privacy": [
+            {
+              "href": "/v7.1/privacy_option/3/",
+              "id": "3"
+            }
+          ]
+        },
+        "points": null,
+        "total_ascent": 41.459904139
+      },
+      {
+        "total_descent": -32.7379303319,
+        "city": "Barcelona",
+        "data_source": null,
+        "description": "",
+        "updated_datetime": "2013-08-25T10:34:24+00:00",
+        "created_datetime": "2013-08-25T10:34:24+00:00",
+        "country": "es",
+        "start_point_type": "",
+        "starting_location": {
+          "type": "Point",
+          "coordinates": [
+            2.1735379263,
+            41.3858216646
+          ]
+        },
+        "distance": 4070.1,
+        "name": "4.07 km walk on 25/08/2013",
+        "climbs": null,
+        "state": "",
+        "max_elevation": 59.99,
+        "postal_code": "08007",
+        "min_elevation": 23.82,
+        "images": [],
+        "_links": {
+          "activity_types": [
+            {
+              "href": "/v7.1/activity_type/9/",
+              "id": "9"
+            }
+          ],
+          "privacy": [
+            {
+              "href": "/v7.1/privacy_option/3/",
+              "id": "3"
+            }
+          ],
+          "self": [
+            {
+              "href": "/v7.1/route/275194683/",
+              "id": "275194683"
+            }
+          ],
+          "alternate": [
+            {
+              "href": "/v7.1/route/275194683/?format=kml&field_set=detailed",
+              "id": "275194683",
+              "name": "kml"
+            },
+            {
+              "href": "/v7.1/route/275194683/?format=gpx&field_set=detailed",
+              "id": "275194683",
+              "name": "gpx"
+            }
+          ],
+          "user": [
+            {
+              "href": "/v7.1/user/23826601/",
+              "id": "23826601"
+            }
+          ],
+          "thumbnail": [
+            {
+              "href": "//drzetlglcbfx.cloudfront.net/routes/thumbnail/275194683/1377426864?size=100x100"
+            }
+          ]
+        },
+        "points": null,
+        "total_ascent": 33.3148693409
+      },
+      {
+        "total_descent": -5.3954652941,
+        "city": "Barcelona",
+        "data_source": null,
+        "description": "",
+        "updated_datetime": "2010-05-15T17:47:36+00:00",
+        "created_datetime": "2010-05-15T17:47:34+00:00",
+        "country": "es",
+        "start_point_type": "",
+        "starting_location": {
+          "type": "Point",
+          "coordinates": [
+            2.172436,
+            41.384746
+          ]
+        },
+        "distance": 3740.14764288,
+        "name": "iMapMyRun: 15/05/2010 19:47",
+        "climbs": null,
+        "state": "Ca",
+        "max_elevation": 31.54,
+        "postal_code": "",
+        "min_elevation": 15.01,
+        "images": [],
+        "_links": {
+          "activity_types": [
+            {
+              "href": "/v7.1/activity_type/9/",
+              "id": "9"
+            }
+          ],
+          "privacy": [
+            {
+              "href": "/v7.1/privacy_option/3/",
+              "id": "3"
+            }
+          ],
+          "self": [
+            {
+              "href": "/v7.1/route/17088362/",
+              "id": "17088362"
+            }
+          ],
+          "alternate": [
+            {
+              "href": "/v7.1/route/17088362/?format=kml&field_set=detailed",
+              "id": "17088362",
+              "name": "kml"
+            },
+            {
+              "href": "/v7.1/route/17088362/?format=gpx&field_set=detailed",
+              "id": "17088362",
+              "name": "gpx"
+            }
+          ],
+          "user": [
+            {
+              "href": "/v7.1/user/3127365/",
+              "id": "3127365"
+            }
+          ],
+          "thumbnail": [
+            {
+              "href": "//drzetlglcbfx.cloudfront.net/routes/thumbnail/17088362/1273945656?size=100x100"
+            }
+          ]
+        },
+        "points": null,
+        "total_ascent": 1.5301625235
+      },
+      {
+        "total_descent": -4.3886697326,
+        "city": "Ciutat Vella",
+        "data_source": "GARMIN FR220",
+        "description": "",
+        "updated_datetime": "2017-02-05T21:32:53+00:00",
+        "created_datetime": "2017-02-05T21:32:45+00:00",
+        "country": "es",
+        "start_point_type": "",
+        "starting_location": {
+          "type": "Point",
+          "coordinates": [
+            2.1734085493,
+            41.3842712715
+          ]
+        },
+        "distance": 3354.65,
+        "name": "Route from GARMIN FR220 (2016-12-10 13:42:58+00:00)",
+        "climbs": null,
+        "state": "56",
+        "max_elevation": 27.8,
+        "postal_code": "",
+        "min_elevation": 22.92,
+        "images": [],
+        "_links": {
+          "activity_types": [
+            {
+              "href": "/v7.1/activity_type/16/",
+              "id": "16"
+            }
+          ],
+          "privacy": [
+            {
+              "href": "/v7.1/privacy_option/3/",
+              "id": "3"
+            }
+          ],
+          "self": [
+            {
+              "href": "/v7.1/route/1438567936/",
+              "id": "1438567936"
+            }
+          ],
+          "alternate": [
+            {
+              "href": "/v7.1/route/1438567936/?format=kml&field_set=detailed",
+              "id": "1438567936",
+              "name": "kml"
+            },
+            {
+              "href": "/v7.1/route/1438567936/?format=gpx&field_set=detailed",
+              "id": "1438567936",
+              "name": "gpx"
+            }
+          ],
+          "user": [
+            {
+              "href": "/v7.1/user/11118266/",
+              "id": "11118266"
+            }
+          ],
+          "thumbnail": [
+            {
+              "href": "//drzetlglcbfx.cloudfront.net/routes/thumbnail/1438567936/1486330373?size=100x100"
+            }
+          ]
+        },
+        "points": null,
+        "total_ascent": 4.6323348006
+      },
+      {
+        "total_descent": -15.2740429959,
+        "city": "Eixample",
+        "data_source": "api3:",
+        "description": "",
+        "updated_datetime": "2014-08-29T21:49:43+00:00",
+        "created_datetime": "2014-08-29T21:49:43+00:00",
+        "country": "es",
+        "start_point_type": "",
+        "starting_location": {
+          "type": "Point",
+          "coordinates": [
+            2.17268947,
+            41.38569946
+          ]
+        },
+        "distance": 2305.53,
+        "name": "Catalunya Station to Carrer del Roser 63",
+        "climbs": null,
+        "state": "56",
+        "max_elevation": 36.95,
+        "postal_code": "",
+        "min_elevation": 13.16,
+        "images": [],
+        "_links": {
+          "activity_types": [
+            {
+              "href": "/v7.1/activity_type/9/",
+              "id": "9"
+            }
+          ],
+          "privacy": [
+            {
+              "href": "/v7.1/privacy_option/3/",
+              "id": "3"
+            }
+          ],
+          "self": [
+            {
+              "href": "/v7.1/route/518563986/",
+              "id": "518563986"
+            }
+          ],
+          "alternate": [
+            {
+              "href": "/v7.1/route/518563986/?format=kml&field_set=detailed",
+              "id": "518563986",
+              "name": "kml"
+            },
+            {
+              "href": "/v7.1/route/518563986/?format=gpx&field_set=detailed",
+              "id": "518563986",
+              "name": "gpx"
+            }
+          ],
+          "user": [
+            {
+              "href": "/v7.1/user/57518170/",
+              "id": "57518170"
+            }
+          ],
+          "thumbnail": [
+            {
+              "href": "//drzetlglcbfx.cloudfront.net/routes/thumbnail/518563986/1409348983?size=100x100"
+            }
+          ]
+        },
+        "points": null,
+        "total_ascent": 18.8422562733
+      },
+      {
+        "total_descent": -46.6423921145,
+        "city": "Barcelona",
+        "data_source": "import",
+        "description": "",
+        "updated_datetime": "2012-09-22T20:15:09+00:00",
+        "created_datetime": "2012-09-22T20:14:54+00:00",
+        "country": "es",
+        "start_point_type": "",
+        "starting_location": {
+          "type": "Point",
+          "coordinates": [
+            2.173435,
+            41.3841914
+          ]
+        },
+        "distance": 6545.04,
+        "name": "playa 6k5",
+        "climbs": null,
+        "state": "",
+        "max_elevation": 31.95,
+        "postal_code": "08002",
+        "min_elevation": -1.57,
+        "images": [],
+        "_links": {
+          "activity_types": [
+            {
+              "href": "/v7.1/activity_type/16/",
+              "id": "16"
+            }
+          ],
+          "privacy": [
+            {
+              "href": "/v7.1/privacy_option/3/",
+              "id": "3"
+            }
+          ],
+          "self": [
+            {
+              "href": "/v7.1/route/139110329/",
+              "id": "139110329"
+            }
+          ],
+          "alternate": [
+            {
+              "href": "/v7.1/route/139110329/?format=kml&field_set=detailed",
+              "id": "139110329",
+              "name": "kml"
+            },
+            {
+              "href": "/v7.1/route/139110329/?format=gpx&field_set=detailed",
+              "id": "139110329",
+              "name": "gpx"
+            }
+          ],
+          "user": [
+            {
+              "href": "/v7.1/user/11118266/",
+              "id": "11118266"
+            }
+          ],
+          "thumbnail": [
+            {
+              "href": "//drzetlglcbfx.cloudfront.net/routes/thumbnail/139110329/1348344909?size=100x100"
+            }
+          ]
+        },
+        "points": null,
+        "total_ascent": 54.0941574272
+      }
+    ]
+  },
+  "total_count": 12572
+}

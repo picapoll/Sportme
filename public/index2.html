@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Demo!!</h1>
+    <div id="gmap" style="with:300px;height:250px;"></div>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script src="js/gmaps.js"></script>
+
+    <script type="text/javascript">
+    window.initMap = function() {
+
+        console.log('Google Maps API version: ' + google.maps.version);
+
+        const url = 'https://oauth2-api.mapmyapi.com/v7.1/route/'
+
+        const config = {
+            'Api-Key': 'g49mt653s27z9qyjhunk2vhck7brffxp',
+            'Authorization': 'Bearer de9f9c0cdf3274550cb0bede702d343f3330f56b',
+            'Content-Type': 'application/json'
+        }
+
+        const latitude = '41.3851'
+        const longitude = '2.1734'
+
+        const close_to_location = `${latitude},${longitude}`
+        const maximum_distance = 10000
+        const minimum_distance = 2000
+
+        const data = {
+            close_to_location,
+            maximum_distance,
+            minimum_distance
+        }
+
+        const beforeSend = request => {
+            request.setRequestHeader("Api-Key", config['Api-Key']);
+            request.setRequestHeader("Authorization", config['Authorization']);
+            request.setRequestHeader("Content-Type", config['Content-Type']);
+        }
+
+
+        $.ajax({
+                url,
+                beforeSend,
+                data
+            })
+            .then(data => data._embedded.routes)
+            .then(routes => {
+                return routes.map(route => {
+                    const [lon, lat] = route.starting_location.coordinates
+                    return {
+                        lat,
+                        lon
+                    }
+                })
+            })
+            .then(locations => {
+                console.log("locations ready!");
+                console.log(locations);
+
+                map = new GMaps({
+                    div: '#gmap',
+                    lat: locations[0].lat,
+                    lng: locations[0].lon
+                });
+
+                locations.forEach(location => {
+
+                    map.addMarker({
+                        lat: location.lat,
+                        lng: location.lon,
+                        click: function(e) {
+                            alert('You clicked in this marker');
+                        }
+                    });
+
+                })
+
+                // 		const path = locations.map( ({lat,lon}) => [lat,lon])
+
+                // 		map.drawPolyline({
+                //   path: path,
+                //   strokeColor: '#131540',
+                //   strokeOpacity: 0.6,
+                //   strokeWeight: 6
+                // });
+
+
+                // new Maplace({
+                //     locations,
+                // }).Load();
+
+            })
+            .catch(err => console.log(err))
+
+
+    }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLSs0ELMovnHhb2_24GyspGEmMH-fZ8Og&callback=initMap"></script>
+</body>
+
+</html>
