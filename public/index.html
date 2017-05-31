@@ -3,7 +3,9 @@
 
 <head>
     <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCP1fC36w-S2tjjjzE6qOhCUncUid6XVo4&libraries=places"></script>
+   <!--  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script> -->
+
     <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
     <script src="js/gmaps.js"></script>
 </head>
@@ -14,7 +16,7 @@
         <!-- onFocus="geolocate()"  -->
     </div>
     <div id="gmap" style="with:300px;height:250px;"></div>
-    <!-- <script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDSSp8B9OhUoIUBtthy0hx22xE5mIBVRPE&libraries=places&callback=initMap' async defer /> </script> -->
+ 
     <!--  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLSs0ELMovnHhb2_24GyspGEmMH-fZ8Og&callback=initMap"></script> -->
     <script>
     // Autocomplete Starts
@@ -79,7 +81,7 @@
                         const [lon, lat] = route.starting_location.coordinates
                         const distance = route.distance
                         const name = route.name
-                        let [href] =route._links.thumbnail
+                        let [href] = route._links.thumbnail
                         href = href.href
                         const kml = route._links.alternate[0].href
                         return {
@@ -117,16 +119,8 @@
                     // 		const path = locations.map( ({lat,lon}) => [lat,lon])
 
                     // 		map.drawPolyline({
-                    //   path: path,
-                    //   strokeColor: '#131540',
-                    //   strokeOpacity: 0.6,
-                    //   strokeWeight: 6
-                    // });
+                    // path: path, // strokeColor: '#131540', // strokeOpacity: 0.6, // strokeWeight: 6 // }); // new Maplace({ // locations, // }).Load();
 
-
-                    // new Maplace({
-                    //     locations,
-                    // }).Load();
 
                 })
                 .catch(err => console.log(err))
