@@ -1,32 +1,145 @@
 <!DOCTYPE html>
-<html lang="en" ng-app>
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js'></script>
-    <!-- <link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap.css"> -->
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
-
+    <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script src="js/gmaps.js"></script>
 </head>
 
-<body>
-    <h1>Hello World! {{ 4 + 5 }}</h1>
-    <input id="searchInput" class="controls" type="text" placeholder="Enter a location">
-    <div id="map"></div>
-    <ul id="geoData">
-        <li>Full Address: <span id="location"></span></li>
-        <li>Postal Code: <span id="postal_code"></span></li>
-        <li>Country: <span id="country"></span></li>
-        <li>Latitude: <span id="lat"></span></li>
-        <li>Longitude: <span id="lon"></span></li>
-    </ul>
-    <input type="button" onclick="getRoutes()" value="getRoutes">
-    </form>
-    <script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDSSp8B9OhUoIUBtthy0hx22xE5mIBVRPE&libraries=places&callback=initMap' async defer /> </script>
-    <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src='js/map.js'></script>
-    <script type="text/javascript" src='js/services.js'></script>
+<body onload="initialize()">
+    <div id="locationField">
+        <input id="autocomplete" placeholder="Enter your address" type="text"></input>
+        <!-- onFocus="geolocate()"  -->
+    </div>
+    <div id="gmap" style="with:300px;height:250px;"></div>
+    <!-- <script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDSSp8B9OhUoIUBtthy0hx22xE5mIBVRPE&libraries=places&callback=initMap' async defer /> </script> -->
+    <!--  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLSs0ELMovnHhb2_24GyspGEmMH-fZ8Og&callback=initMap"></script> -->
+    <script>
+    // Autocomplete Starts
+    var autocomplete;
+
+    function initialize() {
+
+
+        autocomplete = new google.maps.places.Autocomplete(
+            /** @type {HTMLInputElement} */
+            (document.getElementById('autocomplete')), {
+                types: ['geocode']
+            });
+
+        //Action when the autocomplete is filled
+        google.maps.event.addListener(autocomplete, 'place_changed', function() {
+            const place = autocomplete.getPlace()
+            const lat = place.geometry.location.lat().toFixed(4)
+            const lon = place.geometry.location.lng().toFixed(4)
+            console.log(place.geometry.location.lat(), place.geometry.location.lng())
+                //charge Map
+
+
+
+            console.log('Google Maps API version: ' + google.maps.version);
+
+            const url = 'https://oauth2-api.mapmyapi.com/v7.1/route/'
+            console.log(url)
+            const config = {
+                'Api-Key': 'g49mt653s27z9qyjhunk2vhck7brffxp',
+                'Authorization': 'Bearer de9f9c0cdf3274550cb0bede702d343f3330f56b',
+                'Content-Type': 'application/json'
+            }
+
+
+
+            const close_to_location = `${lat},${lon}`
+            const maximum_distance = 9700
+            const minimum_distance = 9500
+
+            const data = {
+                close_to_location,
+                maximum_distance,
+                minimum_distance
+            }
+
+            const beforeSend = request => {
+                request.setRequestHeader("Api-Key", config['Api-Key']);
+                request.setRequestHeader("Authorization", config['Authorization']);
+                request.setRequestHeader("Content-Type", config['Content-Type']);
+            }
+
+
+            $.ajax({
+                    url,
+                    beforeSend,
+                    data
+                })
+                .then(data => data._embedded.routes)
+                .then(routes => {
+                    return routes.map(route => {
+                        const [lon, lat] = route.starting_location.coordinates
+                        const distance = route.distance
+                        const name = route.name
+                        let [href] =route._links.thumbnail
+                        href = href.href
+                        const kml = route._links.alternate[0].href
+                        return {
+                            lat,
+                            lon,
+                            distance,
+                            name,
+                            href,
+                            kml
+                        }
+                    })
+                })
+                .then(locations => {
+                    console.log("locations ready!");
+                    console.log(locations);
+
+                    map = new GMaps({
+                        div: '#gmap',
+                        lat: locations[0].lat,
+                        lng: locations[0].lon
+                    });
+
+                    locations.forEach(location => {
+
+                        map.addMarker({
+                            lat: location.lat,
+                            lng: location.lon,
+                            click: function(e) {
+                                alert('You clicked in this marker');
+                            }
+                        });
+
+                    })
+
+                    // 		const path = locations.map( ({lat,lon}) => [lat,lon])
+
+                    // 		map.drawPolyline({
+                    //   path: path,
+                    //   strokeColor: '#131540',
+                    //   strokeOpacity: 0.6,
+                    //   strokeWeight: 6
+                    // });
+
+
+                    // new Maplace({
+                    //     locations,
+                    // }).Load();
+
+                })
+                .catch(err => console.log(err))
+
+
+
+
+
+
+        });
+
+    }
+    </script>
 </body>
 
 </html>
