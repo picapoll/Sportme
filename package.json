@@ -15,5 +15,8 @@
     "dotenv": "^4.0.0",
     "express": "^4.15.3",
     "mongoose": "^4.10.3"
+  },
+  "devDependencies": {
+    "dotenv": "^4.0.0"
   }
 }
