@@ -3,7 +3,7 @@
 
 <head>
     <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
-    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false&libraries=places"></script>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCP1fC36w-S2tjjjzE6qOhCUncUid6XVo4&libraries=places"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
     <script src="js/gmaps.js"></script>
 </head>
@@ -97,7 +97,7 @@
                             lng: location.lon,
                             nm: location.name,
                             click: function(e) {
-                                alert("Description : " + locations[].name);
+                                alert("Description : " + locations[0].name)
                             }
                         });
                     })
