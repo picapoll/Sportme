@@ -1,7 +1,6 @@
 {
   "name": "project",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "node app",
@@ -10,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "angular": "^1.6.4",
     "body-parser": "^1.17.2",
     "bower": "^1.8.0",
     "dotenv": "^4.0.0",
@@ -19,5 +19,14 @@
   },
   "devDependencies": {
     "dotenv": "^4.0.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/picapoll/sportme.git"
+  },
+  "bugs": {
+    "url": "https://github.com/picapoll/sportme/issues"
+  },
+  "homepage": "https://github.com/picapoll/sportme#readme",
+  "description": ""
 }

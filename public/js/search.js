@@ -7,7 +7,7 @@
      const lon = place.geometry.location.lng().toFixed(4)
 
      console.log(place.geometry.location.lat(), place.geometry.location.lng())
-                // charge Map
+             // charge Map
 
      console.log('Google Maps API version: ' + google.maps.version)
 
@@ -18,7 +18,7 @@
        'Authorization': 'Bearer de9f9c0cdf3274550cb0bede702d343f3330f56b',
        'Content-Type': 'application/json'
      }
-
+     console.log('search')
      const close_to_location = `${lat},${lon}`
      const maximum_distance = 9700
      const minimum_distance = 9500
@@ -40,48 +40,45 @@
        beforeSend,
        data
      })
-                .then(data => data._embedded.routes)
-                .then(routes => {
-                  return routes.map(route => {
-                    const [lon, lat] = route.starting_location.coordinates
-                    const distance = route.distance
-                    const name = route.name
-                    let [href] = route._links.thumbnail
-                    href = href.href
-                    const kml = route._links.alternate[0].href
-                    return {
-                      lat,
-                      lon,
-                      distance,
-                      name,
-                      href,
-                      kml
-                    }
-                  })
-                })
-                .then(locations => {
-                  console.log('locations ready!')
-                  console.log(locations)
+             .then(data => data._embedded.routes)
+             .then(routes => {
+               return routes.map(route => {
+                 const [lon, lat] = route.starting_location.coordinates
+                 const distance = route.distance
+                 const name = route.name
+                 let [href] = route._links.thumbnail
+                 href = href.href
+                 const kml = route._links.alternate[0].href
+                 return {
+                   lat,
+                   lon,
+                   distance,
+                   name,
+                   href,
+                   kml
+                 }
+               })
+             })
+             .then(locations => {
+               console.log('locations ready!')
+               console.log(locations)
+               map = new GMaps({
+                 div: '#gmap',
+                 lat: locations[0].lat,
+                 lng: locations[0].lon
+               })
 
-                  map = new GMaps({
-                    div: '#gmap',
-                    lat: locations[0].lat,
-                    lng: locations[0].lon,
-                    nm: locations[0].name
+               locations.forEach(location => {
+                 map.addMarker({
+                   lat: location.lat,
+                   lng: location.lon,
+                   click: function (e) {
+                     alert('You clicked in this marker')
+                   }
+                 })
+               })
 
-                  })
-
-                  locations.forEach(location => {
-                    map.addMarker({
-                      lat: location.lat,
-                      lng: location.lon,
-                      nm: location.name,
-                      click: function (e) {
-                        alert('Description : ' + locations[0].name)
-                      }
-                    })
-                  })
-                })
-                .catch(err => console.log(err))
+                 .catch(err => console.log(err))
+             })
    })
  })

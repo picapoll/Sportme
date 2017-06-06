@@ -1,0 +1,81 @@
+<div class="navbar navbar-default">
+<div class="container">
+
+	<div class="navbar-btn navbar-left btn-group">
+		<button type="button" id="btn-megamenu" class="btn btn-default"> 
+			<span class="glyphicon glyphicon-align-justify"></span>
+			<span class="nav-label">Menu</span>
+		</button>
+	</div>
+    
+	<div class="navbar-btn navbar-right btn-group">
+		<button type="button" id="btn-options" class="btn btn-default btn-options">
+			<span class="glyphicon glyphicon-cog"></span>
+			<span class="nav-label">Preferences</span>
+		</button>		
+	</div>
+
+    <form class="navbar-form">
+        <div class="form-group" style="display:inline;">
+         
+            <div class="input-group" style="display:table;">
+            
+        		<span class="input-group-btn btn-block" style="width:1%;">
+				
+					<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" >
+						<span class="glyphicon glyphicon-search"></span>
+						<span class="nav-label"> Search</span>
+						<span class="fa fa-caret-down"></span>
+					</button>
+                    
+                    <ul id="search-option" class="dropdown-menu pull-left" role="menu">
+						<li>
+							<a href="#" data-searchtype="search-user" data-placeholder="Enter User Name (first or last)">
+								<span class="glyphicon glyphicon-user"></span>
+								<span class="nav-label">User</span>
+							</a>
+						</li>
+						<li>
+							<a href="#" data-searchtype="search-org" data-placeholder="Enter Organization Name">
+							<span class="fa fa-building-o"></span>
+							<span class="nav-label">Organization</span>
+							</a>
+						</li>
+						<li>
+							<a href="#" data-searchtype="search-kb" data-placeholder="Enter Search Terms">
+							<span class="fa fa-book"></span>
+							<span class="nav-label">KnowledgeBase</span>
+							</a>
+						</li>
+						<li>
+							<a href="#" data-searchtype="search-venue" data-placeholder="Enter Venue Name">
+							<span class="fa fa-map-marker"></span>
+							<span class="nav-label">Venue</span>
+							</a>
+						</li>
+						<li>
+							<a href="#" data-searchtype="search-pl" data-placeholder="Enter Private Label">
+							<span class="fa fa-ticket"></span>
+							<span class="nav-label">Private Label</span>
+							</a>
+						</li>
+					</ul>
+                    
+                </span>
+         
+                <input class="form-control" name="search" placeholder="Search Here" autocomplete="off" autofocus="autofocus" type="text">
+                
+            	<div class="input-group-btn navbar-btn" style="outline:1px solid #7F9192; border-radius:6px;">
+					<button class="btn btn-default btn-nav">
+					GO
+					</button>
+				</div>
+            
+            </div>
+          
+        </div>
+    </form>
+
+ 
+</div>
+</div>
