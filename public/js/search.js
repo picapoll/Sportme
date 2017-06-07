@@ -65,7 +65,7 @@ google.maps.event.addDomListener(window, 'load', function () {
                 }
               })
             })
-
+        .then
         .then(locations => {
           console.log('locations ready!')
           console.log(locations)
