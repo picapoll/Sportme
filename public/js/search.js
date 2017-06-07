@@ -7,10 +7,8 @@ google.maps.event.addDomListener(window, 'load', function () {
     const lon = place.geometry.location.lng().toFixed(4)
 
     const routesInfo = []
-    console.log(routesInfo)
-
     console.log(place.geometry.location.lat(), place.geometry.location.lng())
-            // charge Map
+                    // charge Map
 
     console.log('Google Maps API version: ' + google.maps.version)
 
@@ -44,57 +42,88 @@ google.maps.event.addDomListener(window, 'load', function () {
       data
     })
 
-        .then(data => data._embedded.routes)
-            .then(routes => {
-              return routes.map(route => {
-                const [lon, lat] = route.starting_location.coordinates
-                const distance = route.distance
-                const name = route.name
-                let [href] = route._links.thumbnail
-                href = href.href
-                const kml = route._links.alternate[0].href
-                routesInfo.push({lat, lon})
-                console.log(routesInfo)
-                return {
-                  lat,
-                  lon,
-                  distance,
-                  name,
-                  href,
-                  kml
-                }
-              })
-            })
-        .then
-        .then(locations => {
-          console.log('locations ready!')
-          console.log(locations)
-          map = new GMaps({
-            div: '#gmap',
-            lat: locations[0].lat,
-            lng: locations[0].lon
+                .then(data => data._embedded.routes)
+                    .then(routes => {
+                      return routes.map(route => {
+                        const [lon, lat] = route.starting_location.coordinates
+                        const distance = route.distance
+                        const name = route.name
+                        let [href] = route._links.thumbnail
+                        href = href.href
+                        const kml = route._links.alternate[0].href
+                        const aLength = routesInfo.length
 
-          })
+                        routesInfo.push({aLength, lat, lon, distance, name, href, kml })
 
-          map.addMarker({
-            lat: locations[0].lat,
-            lng: locations[0].lon,
-            title: 'Hello World!',
-            icon: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'
+                        return {
+                          lat,
+                          lon,
+                          distance,
+                          name,
+                          href,
+                          kml
+                        }
+                      })
+                    })
+                    .then(function () {
+                      console.log(routesInfo)
+                      map = new GMaps({
+                        div: '#gmap',
+                        lat: lat,
+                        lng: lon
+                      })
 
-          })
+                      map.addMarker({
+                        lat: lat,
+                        lng: lon,
+                        title: place.formatted_address,
+                        icon: '../images/hotel_0star.png'
+                      })
 
-          locations.forEach(location => {
-            map.addMarker({
-              lat: location.lat,
-              lng: location.lon,
-              click: function (e) {
-                alert('You clicked in this marker')
-              }
-            })
-          })
+                      routesInfo.forEach(location => {
+                        map.addMarker({
+                          lat: location.lat,
+                          lng: location.lon,
+                          icon: '../images/jogging.png',
+                          click: function (e) {
+                            alert('Description: ' + location.name)
+                          }
+                        })
+                      })
 
-            .catch(err => console.log(err))
-        })
+                            // routesInfo.forEach(function (key) {
+                            //   console.log(key.name)
+                            // })
+
+                            // locations => {
+                            // console.log('locations ready!')
+                            // console.log(locations)
+                            // map = new GMaps({
+                            //   div: '#gmap',
+                            //   lat: locations[0].lat,
+                            //   lng: locations[0].lon
+
+                            // })
+
+                            // map.addMarker({
+                            //   lat: locations[0].lat,
+                            //   lng: locations[0].lon,
+                            //   title: 'Hello World!',
+                            //   icon: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'
+
+                            // })
+
+                            // locations.forEach(location => {
+                            //   map.addMarker({
+                            //     lat: location.lat,
+                            //     lng: location.lon,
+                            //     click: function (e) {
+                            //       alert('You clicked in this marker')
+                            //     }
+                            //   })
+                            // })
+
+                            //   .catch(err => console.log(err))
+                    })
   })
 })

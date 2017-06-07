@@ -8,6 +8,10 @@
     <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
     <script src="js/gmaps.js"></script>
     <script type="text/javascript" src="js/search.js"></script>
+    <script type="text/javascript" src="js/pleaseWait.js"></script>
+     <script src="js/pace.js"></script>
+      <link href="css/loading_bar.css" rel="stylesheet" />
+
 </head>
 
 <body>
@@ -71,7 +75,7 @@
                         </span>
                         <input class="form-control" name="search" placeholder="Search Here" autocomplete="off" autofocus="autofocus" type="text" id="txtPlaces">
                         <div class="input-group-btn navbar-btn" style="outline:0px solid #7F9192; border-radius:6px;">
-                           <!--  <button class="btn btn-default btn-nav">
+                            <!--  <button class="btn btn-default btn-nav">
                                GO
                            </button> -->
                         </div>
@@ -80,6 +84,10 @@
             </form>
         </div>
     </div>
+    <!--  End Navbar -->
+   <!--  Laoding -->
+   
+ <!--    End Of Loading -->
     <div class="container-fluid">
         <div class="row content">
             <div class="col-sm-6 sidenav">
@@ -101,9 +109,13 @@
         <p>Footer Text</p>
     </footer>
     <script>
-        $( document ).ready(function() {
-            map = new GMaps({ div: '#gmap', lat: -12.043333, lng: -77.028333 })
-        });
+    $(document).ready(function() {
+        map = new GMaps({
+            div: '#gmap',
+            lat: -12.043333,
+            lng: -77.028333
+        })
+    });
     </script>
 </body>
 
