@@ -8,7 +8,7 @@ google.maps.event.addDomListener(window, 'load', function () {
 
     const routesInfo = []
     console.log(place.geometry.location.lat(), place.geometry.location.lng())
-                    // charge Map
+            // charge Map
 
     console.log('Google Maps API version: ' + google.maps.version)
 
@@ -42,88 +42,63 @@ google.maps.event.addDomListener(window, 'load', function () {
       data
     })
 
-                .then(data => data._embedded.routes)
-                    .then(routes => {
-                      return routes.map(route => {
-                        const [lon, lat] = route.starting_location.coordinates
-                        const distance = route.distance
-                        const name = route.name
-                        let [href] = route._links.thumbnail
-                        href = href.href
-                        const kml = route._links.alternate[0].href
-                        const aLength = routesInfo.length
+        .then(data => data._embedded.routes)
+            .then(routes => {
+              return routes.map(route => {
+                const [lon, lat] = route.starting_location.coordinates
+                const distance = route.distance
+                const name = route.name
+                let [href] = route._links.thumbnail
+                href = href.href
+                const kml = route._links.alternate[0].href
+                const aLength = routesInfo.length + 1
 
-                        routesInfo.push({aLength, lat, lon, distance, name, href, kml })
+                routesInfo.push({ aLength, lat, lon, distance, name, href, kml })
 
-                        return {
-                          lat,
-                          lon,
-                          distance,
-                          name,
-                          href,
-                          kml
-                        }
-                      })
-                    })
-                    .then(function () {
-                      console.log(routesInfo)
-                      map = new GMaps({
-                        div: '#gmap',
-                        lat: lat,
-                        lng: lon
-                      })
+                return {
+                  lat,
+                  lon,
+                  distance,
+                  name,
+                  href,
+                  kml
+                }
+              })
+            })
+            .then(function () {
+              console.log(routesInfo)
+              map = new GMaps({
+                div: '#gmap',
+                lat: lat,
+                lng: lon
+              })
 
-                      map.addMarker({
-                        lat: lat,
-                        lng: lon,
-                        title: place.formatted_address,
-                        icon: '../images/hotel_0star.png'
-                      })
+              map.addMarker({
+                lat: lat,
+                lng: lon,
+                title: place.formatted_address,
+                icon: '../images/hotel_0star.png'
+              })
 
-                      routesInfo.forEach(location => {
-                        map.addMarker({
-                          lat: location.lat,
-                          lng: location.lon,
-                          icon: '../images/jogging.png',
-                          click: function (e) {
-                            alert('Description: ' + location.name)
-                          }
-                        })
-                      })
+              routesInfo.forEach(location => {
+                map.addMarker({
+                  lat: location.lat,
+                  lng: location.lon,
+                  icon: '../images/jogging.png',
+                  click: function (e) {
+                    alert('Description: ' + location.name)
+                  }
+                })
+                var tr
 
-                            // routesInfo.forEach(function (key) {
-                            //   console.log(key.name)
-                            // })
-
-                            // locations => {
-                            // console.log('locations ready!')
-                            // console.log(locations)
-                            // map = new GMaps({
-                            //   div: '#gmap',
-                            //   lat: locations[0].lat,
-                            //   lng: locations[0].lon
-
-                            // })
-
-                            // map.addMarker({
-                            //   lat: locations[0].lat,
-                            //   lng: locations[0].lon,
-                            //   title: 'Hello World!',
-                            //   icon: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'
-
-                            // })
-
-                            // locations.forEach(location => {
-                            //   map.addMarker({
-                            //     lat: location.lat,
-                            //     lng: location.lon,
-                            //     click: function (e) {
-                            //       alert('You clicked in this marker')
-                            //     }
-                            //   })
-                            // })
-
-                            //   .catch(err => console.log(err))
-                    })
+                tr = $('<tr/>')
+                tr.append('<td>' + location.aLength + '</td>')
+                tr.append('<td>' + 'Map' + '</td>')
+                tr.append('<td>' + location.name + '</td>')
+                tr.append('<td>' + location.distance + '</td>')
+                tr.append('<td>' + 'UserAction' + '</td>')
+                $('tbody').append(tr)
+              })
+            })
   })
 })
