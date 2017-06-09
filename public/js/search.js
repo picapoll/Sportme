@@ -13,6 +13,7 @@ google.maps.event.addDomListener(window, 'load', function () {
     console.log('Google Maps API version: ' + google.maps.version)
 
     const url = 'https://oauth2-api.mapmyapi.com/v7.1/route/'
+    const urlTrack = 'https://oauth2-api.mapmyapi.com'
     console.log(url)
     const config = {
       'Api-Key': 'g49mt653s27z9qyjhunk2vhck7brffxp',
@@ -49,7 +50,7 @@ google.maps.event.addDomListener(window, 'load', function () {
                 const distance = route.distance
                 const name = route.name
                 let [href] = route._links.thumbnail
-                href = href.href
+
                 const kml = route._links.alternate[0].href
                 const aLength = routesInfo.length + 1
 
@@ -81,19 +82,40 @@ google.maps.event.addDomListener(window, 'load', function () {
               })
 
               routesInfo.forEach(location => {
+                const htmlString = `
+                    <div class="container-fluid">
+                    <div class="content">
+                          <div class="col-sm-6 sidenav">
+                            <iframe width="100%" height="100" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" margin="0 auto" src="${location.href.href}"></iframe>
+                        </div>
+                        
+                          <div class="col-sm-6">
+                          <h2>Description</h2>
+                         
+                            <strong> ${location.name}</strong><br>
+                            ${location.distance}<br>
+                          
+                        </div>
+                      </div>
+                  </div>
+
+                `
+                // const contentString = '<div class="container">' + '<div class="row-fluid">' + '<div class="span8">'  +'<iframe'+ width="100%"'+' height="150"'+' frameborder="0"'+' scrolling="no"'+' marginheight="0"'+' marginwidth="0" '+'src=http://'+ location.href.href + '>+'</img>' + '</div>' + '<div class="span4">' + '<h2> Description:</h2>' + location.name + '</div>' + '</div>' + '</div>'
                 map.addMarker({
+
                   lat: location.lat,
                   lng: location.lon,
                   icon: '../images/jogging.png',
-                  click: function (e) {
-                    alert('Description: ' + location.name)
+                  infoWindow: {
+                    content: htmlString
                   }
                 })
+
                 var tr
 
                 tr = $('<tr/>')
                 tr.append('<td>' + location.aLength + '</td>')
-                tr.append('<td>' + 'Map' + '</td>')
+                tr.append('<td>' + '<img src=' + 'http://' + location.href.href + '></img></td>')
                 tr.append('<td>' + location.name + '</td>')
                 tr.append('<td>' + location.distance + '</td>')
                 tr.append('<td>' + 'UserAction' + '</td>')
