@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node app",
-    "dev": "nodemonserver/app.js"
+    "dev": "nodemonserver app"
   },
   "author": "",
   "license": "ISC",
