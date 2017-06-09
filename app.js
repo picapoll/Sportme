@@ -17,7 +17,7 @@ const dbUrl = process.env.DB_URL
 console.log(dbUrl)
 const port = process.env.PORT
 
-app.use(express.static(path.join(__dirname, '../public')))
+app.use(express.static(path.join(__dirname, '/public')))
 // mongoose.Promise = Promise
 // mongoose.connect(dbUrl)
 
