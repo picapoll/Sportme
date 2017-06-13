@@ -1,0 +1,243 @@
+<?xml version="1.0" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+ <Document>
+  <Style id="kmlLineStyle">
+   <LineStyle>
+    <color>
+     7f0000ff
+    </color>
+    <width>
+     4
+    </width>
+   </LineStyle>
+  </Style>
+  <Placemark>
+   <name>
+<![CDATA[Port mataro + Via Europa]]>   </name>
+   <styleUrl>
+    #kmlLineStyle
+   </styleUrl>
+   <LineString>
+    <altitudeMode>
+     clampToGround
+    </altitudeMode>
+    <tessellate>
+     1
+    </tessellate>
+    <coordinates>
+     2.4308587354,41.5458672598,0 2.4316741269,41.5451285205,0 2.4316741269,41.5451285205,0 2.4325753491,41.5435225363,0 2.4325753491,41.5435225363,0 2.4345065396,41.5416595447,0 2.4345065396,41.5416595447,0 2.4352361005,41.5409207573,0 2.4352361005,41.5409207573,0 2.4362231534,41.537612171,0 2.4362231534,41.537612171,0 2.4384547513,41.535797195,0 2.4384547513,41.535797195,0 2.4403859418,41.5342873532,0 2.4403859418,41.5342873532,0 2.4420167249,41.5330023536,0 2.4420167249,41.5330023536,0 2.4434329312,41.5319743356,0 2.4434329312,41.5319743356,0 2.4469090741,41.5345122255,0 2.4469090741,41.5345122255,0 2.4472953122,41.5342231038,0 2.4472953122,41.5342231038,0 2.4467803281,41.5335163565,0 2.4467803281,41.5335163565,0 2.449269418,41.5302395182,0 2.449269418,41.5302395182,0 2.4445916455,41.5262235585,0 2.4445916455,41.5262235585,0 2.4487544339,41.5302716448,0 2.4487544339,41.5302716448,0 2.4466086667,41.5332272304,0 2.4466086667,41.5332272304,0 2.449269418,41.52982187,0 2.449269418,41.52982187,0 2.4441624921,41.5264805874,0 2.4441624921,41.5264805874,0 2.4482823651,41.5303358981,0 2.4482823651,41.5303358981,0 2.44639409,41.5330344789,0 2.44639409,41.5330344789,0 2.4443341534,41.5316209507,0 2.4443341534,41.5316209507,0 2.4416304868,41.5296933623,0 2.4416304868,41.5296933623,0 2.437296037,41.527251668,0 2.437296037,41.527251668,0 2.434806947,41.5291472018,0 2.434806947,41.5291472018,0 2.4353219312,41.5302073915,0 2.4353219312,41.5302073915,0 2.4341203015,41.5302395182,0 2.4341203015,41.5302395182,0 2.4312449734,41.536279052,0 2.4312449734,41.536279052,0 2.4320174496,41.5376282326,0 2.4320174496,41.5376282326,0 2.43330491,41.5388488954,0 2.43330491,41.5388488954,0 2.4345065396,41.5398125604,0 2.4345065396,41.5398125604,0 2.4351073544,41.5404871173,0 2.4351073544,41.5404871173,0 2.4343348782,41.5422537806,0 2.4343348782,41.5422537806,0 2.4390555661,41.5455300103,0 2.4390555661,41.5455300103,0 2.4384118359,41.5459154382,0 2.4384118359,41.5459154382,0 2.4376822751,41.5453051763,0 2.4376822751,41.5453051763,0 2.4360085767,41.5460439136,0 2.4360085767,41.5460439136,0 2.4331332486,41.5440525155,0 2.4331332486,41.5440525155,0 2.4328757565,41.5440203957,0 2.4328757565,41.5440203957,0 2.4322320264,41.5450482222,0 2.4322320264,41.5450482222,0 2.4307729047,41.5456906055,0 
+    </coordinates>
+   </LineString>
+  </Placemark>
+  <Style id="Kilometer_1">
+   <IconStyle>
+    <Icon>
+     <href>
+<![CDATA[http://api.mapmyfitness.com/vx/map_marker_image/0/?format=png&txt=1]]>     </href>
+    </Icon>
+   </IconStyle>
+  </Style>
+  <Placemark>
+   <styleUrl>
+    #Kilometer_1
+   </styleUrl>
+   <Point>
+    <coordinates>
+     2.4362231534,41.537612171,0
+    </coordinates>
+   </Point>
+   <name>
+    Kilometer 1
+   </name>
+  </Placemark>
+  <Style id="Kilometer_2">
+   <IconStyle>
+    <Icon>
+     <href>
+<![CDATA[http://api.mapmyfitness.com/vx/map_marker_image/0/?format=png&txt=2]]>     </href>
+    </Icon>
+   </IconStyle>
+  </Style>
+  <Placemark>
+   <styleUrl>
+    #Kilometer_2
+   </styleUrl>
+   <Point>
+    <coordinates>
+     2.4469090741,41.5345122255,0
+    </coordinates>
+   </Point>
+   <name>
+    Kilometer 2
+   </name>
+  </Placemark>
+  <Style id="Kilometer_3">
+   <IconStyle>
+    <Icon>
+     <href>
+<![CDATA[http://api.mapmyfitness.com/vx/map_marker_image/0/?format=png&txt=3]]>     </href>
+    </Icon>
+   </IconStyle>
+  </Style>
+  <Placemark>
+   <styleUrl>
+    #Kilometer_3
+   </styleUrl>
+   <Point>
+    <coordinates>
+     2.4445916455,41.5262235585,0
+    </coordinates>
+   </Point>
+   <name>
+    Kilometer 3
+   </name>
+  </Placemark>
+  <Style id="Kilometer_5">
+   <IconStyle>
+    <Icon>
+     <href>
+<![CDATA[http://api.mapmyfitness.com/vx/map_marker_image/0/?format=png&txt=5]]>     </href>
+    </Icon>
+   </IconStyle>
+  </Style>
+  <Placemark>
+   <styleUrl>
+    #Kilometer_5
+   </styleUrl>
+   <Point>
+    <coordinates>
+     2.449269418,41.52982187,0
+    </coordinates>
+   </Point>
+   <name>
+    Kilometer 5
+   </name>
+  </Placemark>
+  <Style id="Kilometer_6">
+   <IconStyle>
+    <Icon>
+     <href>
+<![CDATA[http://api.mapmyfitness.com/vx/map_marker_image/0/?format=png&txt=6]]>     </href>
+    </Icon>
+   </IconStyle>
+  </Style>
+  <Placemark>
+   <styleUrl>
+    #Kilometer_6
+   </styleUrl>
+   <Point>
+    <coordinates>
+     2.4482823651,41.5303358981,0
+    </coordinates>
+   </Point>
+   <name>
+    Kilometer 6
+   </name>
+  </Placemark>
+  <Style id="Kilometer_7">
+   <IconStyle>
+    <Icon>
+     <href>
+<![CDATA[http://api.mapmyfitness.com/vx/map_marker_image/0/?format=png&txt=7]]>     </href>
+    </Icon>
+   </IconStyle>
+  </Style>
+  <Placemark>
+   <styleUrl>
+    #Kilometer_7
+   </styleUrl>
+   <Point>
+    <coordinates>
+     2.437296037,41.527251668,0
+    </coordinates>
+   </Point>
+   <name>
+    Kilometer 7
+   </name>
+  </Placemark>
+  <Style id="Kilometer_9">
+   <IconStyle>
+    <Icon>
+     <href>
+<![CDATA[http://api.mapmyfitness.com/vx/map_marker_image/0/?format=png&txt=9]]>     </href>
+    </Icon>
+   </IconStyle>
+  </Style>
+  <Placemark>
+   <styleUrl>
+    #Kilometer_9
+   </styleUrl>
+   <Point>
+    <coordinates>
+     2.4312449734,41.536279052,0
+    </coordinates>
+   </Point>
+   <name>
+    Kilometer 9
+   </name>
+  </Placemark>
+  <Style id="Kilometer_10">
+   <IconStyle>
+    <Icon>
+     <href>
+<![CDATA[http://api.mapmyfitness.com/vx/map_marker_image/0/?format=png&txt=10]]>     </href>
+    </Icon>
+   </IconStyle>
+  </Style>
+  <Placemark>
+   <styleUrl>
+    #Kilometer_10
+   </styleUrl>
+   <Point>
+    <coordinates>
+     2.4390555661,41.5455300103,0
+    </coordinates>
+   </Point>
+   <name>
+    Kilometer 10
+   </name>
+  </Placemark>
+  <Style id="start_marker">
+   <IconStyle>
+    <Icon>
+     <href>
+<![CDATA[https://mmf.cachefly.net/d/mapping_api/stable/img/markers/start.png]]>     </href>
+    </Icon>
+   </IconStyle>
+  </Style>
+  <Placemark>
+   <styleUrl>
+    #start_marker
+   </styleUrl>
+   <Point>
+    <coordinates>
+     2.4308587354,41.5458672598,0
+    </coordinates>
+   </Point>
+   <name>
+    Port mataro + Via Europa
+   </name>
+  </Placemark>
+  <Style id="finish_marker">
+   <IconStyle>
+    <Icon>
+     <href>
+<![CDATA[https://mmf.cachefly.net/d/mapping_api/stable/img/markers/stop.png]]>     </href>
+    </Icon>
+   </IconStyle>
+  </Style>
+  <Placemark>
+   <styleUrl>
+    #finish_marker
+   </styleUrl>
+   <Point>
+    <coordinates>
+     2.4307729047,41.5456906055,0
+    </coordinates>
+   </Point>
+   <name>
+    Port mataro + Via Europa
+   </name>
+  </Placemark>
+ </Document>
+</kml>

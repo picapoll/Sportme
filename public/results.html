@@ -1,28 +1,67 @@
-<div class="container">
-    <div class="row resultsbackground">
-        <div>
-            <h2>Search Results from <stong>{{city}} to Barcelona for {{departureDate}}</stong></h2>
-            <div class="col-md-12 headerresults">
-                <table class="table table-list-search">
-                    <thead>
-                        <tr>
-                            <th>Distance</th>
-                            <th>Ascent</th>
-                            <th>Name</th>
-                            <th>City</th>
-                            <th>map</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr ng-repeat="flight in listflights">
-                            <td><strong> € {{flight.total_price}}</strong></td>
-                            <td>{{flight.flight_number}}</td>
-                            <td><span class="glyphicon glyphicon-time" aria-hidden="true"></span> <strong> {{flight.departs_at}}</strong> </td>
-                            <td>{{flight.arrives_at}}</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-</div>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>KML Click Capture Sample</title>
+    <style>
+    html,
+    body {
+        height: 370px;
+        padding: 0;
+        margin: 0;
+    }
+    
+    #map {
+        height: 360px;
+        width: 300px;
+        overflow: hidden;
+        float: left;
+        border: thin solid #333;
+    }
+    
+    #capture {
+        height: 360px;
+        width: 480px;
+        overflow: hidden;
+        float: left;
+        background-color: #ECECFB;
+        border: thin solid #333;
+        border-left: none;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="map"></div>
+    <div id="capture"></div>
+    <script>
+    var map;
+    var src = 'http://127.0.0.1:3000/kml/route131505119.kml';
+
+    function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+            center: new google.maps.LatLng(41.5381124, 2.444740599999932),
+            zoom: 14,
+            mapTypeId: 'terrain'
+        });
+
+        var ctaLayer = new google.maps.KmlLayer({
+            url: 'http://gaia-si.com/temp/route131505119.kml',
+            map: map
+        });
+        
+       
+        kmlLayer.addListener('click', function(event) {
+            var content = event.featureData.infoWindowHtml;
+            var testimonial = document.getElementById('capture');
+            testimonial.innerHTML = content;
+        });
+    }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCP1fC36w-S2tjjjzE6qOhCUncUid6XVo4&callback=initMap">
+    </script>
+</body>
+
+</html>

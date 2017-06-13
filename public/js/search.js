@@ -14,6 +14,7 @@ google.maps.event.addDomListener(window, 'load', function () {
 
     const url = 'https://oauth2-api.mapmyapi.com/v7.1/route/'
     const urlTrack = 'https://oauth2-api.mapmyapi.com'
+
     console.log(url)
     const config = {
       'Api-Key': 'g49mt653s27z9qyjhunk2vhck7brffxp',
@@ -52,9 +53,11 @@ google.maps.event.addDomListener(window, 'load', function () {
                 let [href] = route._links.thumbnail
 
                 const kml = route._links.alternate[0].href
+                const gpx = route._links.alternate[1].href
                 const aLength = routesInfo.length + 1
-
-                routesInfo.push({ aLength, lat, lon, distance, name, href, kml })
+                const urlTrack = 'https://oauth2-api.mapmyapi.com' + gpx
+                const urlKml = 'https://oauth2-api.mapmyapi.com' + kml
+                routesInfo.push({ aLength, lat, lon, distance, name, href, kml, gpx, urlTrack, urlKml })
 
                 return {
                   lat,
@@ -62,7 +65,8 @@ google.maps.event.addDomListener(window, 'load', function () {
                   distance,
                   name,
                   href,
-                  kml
+                  kml,
+                  gpx
                 }
               })
             })
@@ -82,6 +86,23 @@ google.maps.event.addDomListener(window, 'load', function () {
               })
 
               routesInfo.forEach(location => {
+                const htmlMap = `
+                  <div id="map"></div>
+                    <script>
+
+                      function initMap() {
+                        var map = new google.maps.Map(document.getElementById('map'), {
+                          zoom: 11,
+                          center: {lat: 41.876, lng: -87.624}
+                        });
+
+                        var ctaLayer = new google.maps.KmlLayer({
+                          url: 'http://googlemaps.github.io/js-v2-samples/ggeoxml/cta.kml',
+                          map: map
+                        });
+                      }
+                    </script> 
+                  `
                 const htmlString = `
                     <div class="container-fluid">
                     <div class="content">
@@ -100,16 +121,26 @@ google.maps.event.addDomListener(window, 'load', function () {
                   </div>
 
                 `
-                // const contentString = '<div class="container">' + '<div class="row-fluid">' + '<div class="span8">'  +'<iframe'+ width="100%"'+' height="150"'+' frameborder="0"'+' scrolling="no"'+' marginheight="0"'+' marginwidth="0" '+'src=http://'+ location.href.href + '>+'</img>' + '</div>' + '<div class="span4">' + '<h2> Description:</h2>' + location.name + '</div>' + '</div>' + '</div>'
+
+                const htmlStringMap = ` <div class="container-fluid">
+                    <div class="content">
+                       <div id="map">
+                </div>  
+                     </div>
+                  </div>
+                   `
+                            // const contentString = '<div class="container">' + '<div class="row-fluid">' + '<div class="span8">'  +'<iframe'+ width="100%"'+' height="150"'+' frameborder="0"'+' scrolling="no"'+' marginheight="0"'+' marginwidth="0" '+'src=http://'+ location.href.href + '>+'</img>' + '</div>' + '<div class="span4">' + '<h2> Description:</h2>' + location.name + '</div>' + '</div>' + '</div>'
                 map.addMarker({
 
                   lat: location.lat,
                   lng: location.lon,
                   icon: '../images/jogging.png',
                   infoWindow: {
-                    content: htmlString
+                    content: htmlStringMap
                   }
                 })
+
+                        // console.log(location.urlKml)
 
                 var tr
 
@@ -120,6 +151,41 @@ google.maps.event.addDomListener(window, 'load', function () {
                 tr.append('<td>' + location.distance + '</td>')
                 tr.append('<td>' + 'UserAction' + '</td>')
                 $('tbody').append(tr)
+              })
+                    /*
+                                       $.ajax({
+                                         url: routesInfo[0].urlKml,
+                                         beforeSend,
+                                         track
+                                       }) */
+
+              var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 11,
+                center: { lat: place.geometry.location.lat(), lng: place.geometry.location.lng() }
+
+              })
+              var marker = new google.maps.Marker({
+                position: { lat: place.geometry.location.lat(), lng: place.geometry.location.lng()},
+                map: map,
+                title: 'Hello World!'
+              })
+
+              var ctaLayer = new google.maps.KmlLayer({
+                url: 'http://gaia-si.com/temp/route131505119.kml',
+                map: map
+              })
+
+              infoWindow = new google.maps.InfoWindow({})
+              map.loadFromKML({
+                url: 'http://gaia-si.com/temp/route131505119.kml',
+                suppressInfoWindows: true,
+                events: {
+                  click: function (point) {
+                    infoWindow.setContent(point.featureData.infoWindowHtml)
+                    infoWindow.setPosition(point.latLng)
+                    infoWindow.open(map.map)
+                  }
+                }
               })
             })
   })

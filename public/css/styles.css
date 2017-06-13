@@ -1,3 +1,13 @@
+body {
+    width: 100%;
+    height: 92%;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
 .navbar-default {
     margin-bottom: 0px;
 }
@@ -9,7 +19,8 @@
     font-weight: 300;
     color: #888;
     line-height: 30px;
-    max-width: 1300px;
+    max-width: 100%;
+    height: 86%;
     margin: 0 auto;
 }
 
@@ -18,9 +29,21 @@
     padding-left: 0px;
 }
 
+#gmap {
+    height: 100%;
+    width: 100%;
+}
+
 #map {
     width: 100%;
-    height: 800px;
+    height: 100%;
+}
+
+#map_canvas {
+    width: 750px;
+    height: 600px;
+    margin: 0;
+    padding: 0;
 }
 
 .controls {
