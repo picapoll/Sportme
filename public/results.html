@@ -14,8 +14,8 @@
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCP1fC36w-S2tjjjzE6qOhCUncUid6XVo4&libraries=places"></script>
     <!-- Custom CSS -->
     <link href="css/scrolling-nav.css" rel="stylesheet">
-  <!--    <link href="css/styles.css" rel="stylesheet"> -->
-
+    <!--    Responsive Table -->
+    <link href="css/responsiveTable.css" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -70,11 +70,10 @@
                             <label>
                                 Distance to run:
                                 <select id='search_radius'>
-                                    <option value='5'>
-                                        < 5 km </option>
-                                            <option value='10'>Between 5 and 10 km</option>
-                                            <option value='20'>Between 10 and 20 km</option>
-                                            <option value='40'>Between 20 and 40 km</option>
+                                    <option value='5'>Less than 5 km </option>
+                                    <option value='10'>Between 5 and 10 km</option>
+                                    <option value='20'>Between 10 and 20 km</option>
+                                    <option value='40'>Between 20 and 40 km</option>
                                 </select>
                             </label>
                         </p>
@@ -97,7 +96,7 @@
                             <p>Please enable JavaScript to view the map.</p>
                         </div>
                     </noscript>
-                    <div id="gmap" style="with:100%; height:450px;"></div>
+                    <div id="gmap" style="with:100%; height:480px;"></div>
                 </div>
             </div>
         </div>
@@ -124,8 +123,24 @@
                         </div>
                     </form>
                 </div>
-                <div class="col-md-9" style="height:475px;overflow:auto;">
-                    <table class="table table-list-search">
+                <div id="no-more-tables" class="col-md-9" style="height:475px;overflow:auto;">
+                    <table class="col-md-12 table-bordered table-striped table-condensed cf">
+                        <thead class="cf">
+                            <tr>
+                                <th>#</th>
+                                <th>Map</th>
+                                <th>Description (by users)</th>
+                                <th>Distance</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                               
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!--      <table class="table table-list-search">
                         <thead>
                             <tr>
                                 <th>#</th>
@@ -140,12 +155,13 @@
                             <tr>
                             </tr>
                         </tbody>
-                    </table>
+                    </table> -->
                 </div>
             </div>
         </div>
     </section>
     <!-- New Section<! -->
+    
     <!--  jQuery-->
     <script src="js/jquery.js"></script>
     <!-- Bootstrap Core JavaScript
