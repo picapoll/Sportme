@@ -82,32 +82,15 @@ google.maps.event.addDomListener(window, 'load', function () {
                 lat: lat,
                 lng: lon,
                 title: place.formatted_address,
-                icon: '../images/hotel_0star.png'
+                icon: 'https://res.cloudinary.com/picapoll/image/upload/v1497371946/hotel_0star_ispkiy.png'
               })
 
               routesInfo.forEach(location => {
-                const htmlMap = `
-                  <div id="map"></div>
-                    <script>
-
-                      function initMap() {
-                        var map = new google.maps.Map(document.getElementById('map'), {
-                          zoom: 11,
-                          center: {lat: 41.876, lng: -87.624}
-                        });
-
-                        var ctaLayer = new google.maps.KmlLayer({
-                          url: 'http://googlemaps.github.io/js-v2-samples/ggeoxml/cta.kml',
-                          map: map
-                        });
-                      }
-                    </script> 
-                  `
                 const htmlString = `
                     <div class="container-fluid">
                     <div class="content">
                           <div class="col-sm-6 sidenav">
-                            <iframe width="100%" height="100" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" margin="0 auto" src="${location.href.href}"></iframe>
+                            <iframe width="100%" height="100" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" margin="0 auto" src="http:${location.href.href}"></iframe>
                         </div>
                         
                           <div class="col-sm-6">
@@ -122,21 +105,13 @@ google.maps.event.addDomListener(window, 'load', function () {
 
                 `
 
-                const htmlStringMap = ` <div class="container-fluid">
-                    <div class="content">
-                       <div id="map">
-                </div>  
-                     </div>
-                  </div>
-                   `
-                            // const contentString = '<div class="container">' + '<div class="row-fluid">' + '<div class="span8">'  +'<iframe'+ width="100%"'+' height="150"'+' frameborder="0"'+' scrolling="no"'+' marginheight="0"'+' marginwidth="0" '+'src=http://'+ location.href.href + '>+'</img>' + '</div>' + '<div class="span4">' + '<h2> Description:</h2>' + location.name + '</div>' + '</div>' + '</div>'
                 map.addMarker({
 
                   lat: location.lat,
                   lng: location.lon,
-                  icon: '../images/jogging.png',
+                  icon: 'https://res.cloudinary.com/picapoll/image/upload/v1497371946/jogging_kmbdhu.png',
                   infoWindow: {
-                    content: htmlStringMap
+                    content: htmlString
                   }
                 })
 
@@ -165,7 +140,7 @@ google.maps.event.addDomListener(window, 'load', function () {
 
               })
               var marker = new google.maps.Marker({
-                position: { lat: place.geometry.location.lat(), lng: place.geometry.location.lng()},
+                position: { lat: place.geometry.location.lat(), lng: place.geometry.location.lng() },
                 map: map,
                 title: 'Hello World!'
               })
