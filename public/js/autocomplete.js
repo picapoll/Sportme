@@ -16,3 +16,4 @@ google.maps.event.addDomListener(window, 'load', function () {
     console.log('Google Maps API version: ' + google.maps.version)
   })
 })
+	
