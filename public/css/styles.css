@@ -1,11 +1,16 @@
-#map_canvas img {
-    max-width: none;
-}
 
 .navbar-default {
     margin-bottom: 0px;
 }
 
+.navbar-brand {
+  padding: 0px;
+}
+.navbar-brand>img {
+  height: 100%;
+  padding: 15px;
+  width: auto;
+}
 .container-fluid {
     background: url(../images/bg.jpg) left top repeat;
     font-family: 'Roboto', sans-serif;
@@ -34,12 +39,6 @@
 }
 
 
-/*#map_canvas {
-    width: 750px;
-    height: 600px;
-    margin: 0;
-    padding: 0;
-}*/
 
 .controls {
     margin-top: 10px;

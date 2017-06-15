@@ -1,12 +1,12 @@
 {
-  "name": "project",
-  "homepage": "https://github.com/picapoll/sportme",
+  "name": "tracksandhotels",
+  "description": "",
+  "main": "index.js",
   "authors": [
     "Bernat Moragas <bmoragas@gmail.com>"
   ],
-  "description": "",
-  "main": "",
-  "license": "MIT",
+  "license": "ISC",
+  "homepage": "",
   "ignore": [
     "**/.*",
     "node_modules",
@@ -15,6 +15,7 @@
     "tests"
   ],
   "dependencies": {
+    "bootstrap": "^3.3.7",
     "jquery": "^3.2.1"
   }
 }

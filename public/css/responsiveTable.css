@@ -22,9 +22,9 @@
         border: none;
         border-bottom: 1px solid #eee;
         position: relative;
-        padding-left: 50%;
+   /*     padding-left: 50%;*/
         white-space: normal;
-        text-align: left;
+        text-align: center;
     }
     #no-more-tables td:before {
         /* Now like a table header */
@@ -35,7 +35,7 @@
         width: 45%;
         padding-right: 10px;
         white-space: nowrap;
-        text-align: left;
+        text-align: center;
         font-weight: bold;
     }
     /*

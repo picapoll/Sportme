@@ -1,6 +1,4 @@
- $('#searchButton').click(function () {
-   console.log('hola')
-
+ $('#searchButton').click(function () 	{
    const url = 'https://oauth2-api.mapmyapi.com/v7.1/route/'
    const urlTrack = 'https://oauth2-api.mapmyapi.com'
    $()
