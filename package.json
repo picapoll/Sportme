@@ -8,6 +8,8 @@
       "postinstall": "bower install",
       "start": "node server/app",
       "dev": "nodemon server/app"  },
+
+      // npm run dev
       
 
   "keywords": [],
