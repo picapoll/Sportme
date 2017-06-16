@@ -90,14 +90,14 @@
                     <div class="container-fluid">
                     <div class="content">
                           <div class="col-sm-6 sidenav">
-                            <iframe width="100%" height="100" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" margin="0 auto" src="http:${location.href.href}"></iframe>
+                            <img  src="http:${location.href.href}"></img>
                         </div>
 
                           <div class="col-sm-6">
-                          <h2>Description</h2>
-
-                            <strong> ${location.name}</strong><br>
-                            ${location.distance}<br>
+                       
+                        <h4>Description: </h4>${location.name}
+                        <h6>Distance </h6>${location.distance}</div></div>
+                   
 
                         </div>
                       </div>
@@ -110,18 +110,45 @@
                         <div class="col-md-4 ">
                             <img src="http:${location.href.href}" class="img-responsive">
                         </div>
-                    <div class="col-md-8 ">
+                    <div >
                         <h4>Description: </h4>${location.name}
                         <h6>Distance </h6>${location.distance}</div></div>
                     </div>
                   `
+
+             const product2 = `        <div class="col-md-4">
+              <div class="thumbnail">
+                <img src="http:${location.href.href}" alt="" class="img-responsive">
+                <div class="caption">
+                  <h4 class="pull-right">$700.99</h4>
+                  <h4><a href="#">Mobile Product</a></h4>
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                </div>
+                <div class="ratings">
+                  <p>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                     (15 reviews)
+                  </p>
+                </div>
+                <div class="space-ten"></div>
+                <div class="btn-ground text-center">
+                    <button type="button" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Add To Cart</button>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><i class="fa fa-search"></i> Quick View</button>
+                </div>
+                <div class="space-ten"></div>
+              </div>
+            </div>`
              map.addMarker({
 
                lat: location.lat,
                lng: location.lon,
                icon: 'https://res.cloudinary.com/picapoll/image/upload/v1497371946/jogging_kmbdhu.png',
                infoWindow: {
-                 content: product
+                 content: htmlString
                }
              })
 
