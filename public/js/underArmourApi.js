@@ -79,7 +79,7 @@
              lat: lat,
              lng: lon,
              title: place.formatted_address,
-             icon: 'https://res.cloudinary.com/picapoll/image/upload/v1497568115/Map-Marker-Marker-Outside-Chartreuse-icon64x64_wn2vn7.png',
+             icon: 'https://res.cloudinary.com/picapoll/image/upload/c_scale,w_64/v1497606255/blue-pin-md_mx7nm6.png',
              infoWindow: {
                content: placeString
              }

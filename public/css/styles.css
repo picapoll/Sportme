@@ -22,6 +22,16 @@
 
 
 .navbar-default .navbar-brand {
-    color: #333;
+    color: #fcf8e3;
     font-size: 34px;
+    font-family: serif;
+    position: relative;
 }
+
+
+.navbar-default .navbar-brand:hover {
+    color: #fcf8e3;
+        top: -6px;
+   
+}
+
