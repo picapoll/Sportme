@@ -1,38 +1,24 @@
- $('#searchButton').click(function () 	{
+ $('#searchButton').click(function () {
    const url = 'https://oauth2-api.mapmyapi.com/v7.1/route/'
    const urlTrack = 'https://oauth2-api.mapmyapi.com'
    $()
-   console.log(url)
+
    const config = {
      'Api-Key': 'g49mt653s27z9qyjhunk2vhck7brffxp',
      'Authorization': 'Bearer de9f9c0cdf3274550cb0bede702d343f3330f56b',
      'Content-Type': 'application/json'
    }
-   console.log('search')
-         // Empty Array and Table
+
+     // Empty Array and Table
    $('#no-more-tables tbody').empty()
    let routesInfo = []
    console.log(routesInfo)
    const close_to_location = `${lat},${lon}`
 
-   console.log('Distance -> ' + $('#running_distance').val())
    let maximum_distance, minimum_distance
 
-   if ($('#running_distance').val() == 5) {
-     console.log('5')
-     maximum_distance = 5000
-     minimum_distance = 0
-   } else if ($('#running_distance').val() == 10) {
-     maximum_distance = 10000
-     minimum_distance = 5000
-   } else if ($('#running_distance').val() == 20) {
-     maximum_distance = 20000
-     minimum_distance = 10000
-   } else if ($('#running_distance').val() == 40) {
-     maximum_distance = 40000
-     minimum_distance = 20000
-   }
-   console.log(maximum_distance + ' & ' + minimum_distance)
+   minimum_distance = $('#min_dst').val()
+   maximum_distance = $('#max_dst').val()
 
    const data = {
      close_to_location,
@@ -45,7 +31,6 @@
      request.setRequestHeader('Authorization', config['Authorization'])
      request.setRequestHeader('Content-Type', config['Content-Type'])
    }
-   console.log('before ajax....')
 
    $.ajax({
      url,
@@ -78,7 +63,6 @@
                gpx
              }
            })
-           console.log('routes')
          })
          .then(function () {
            map = new GMaps({
@@ -87,11 +71,18 @@
              lng: lon
            })
 
+           const placeString = `<span style="padding: 0px; text-align:left" align="left"><h5>${website} &nbsp; &nbsp; 
+                            </h5><p> ${address} <br />
+
+                            <a target="_blank" href= ${gwww}> More Information </a></p>`
            map.addMarker({
              lat: lat,
              lng: lon,
              title: place.formatted_address,
-             icon: 'https://res.cloudinary.com/picapoll/image/upload/v1497371946/hotel_0star_ispkiy.png'
+             icon: 'https://res.cloudinary.com/picapoll/image/upload/v1497568115/Map-Marker-Marker-Outside-Chartreuse-icon64x64_wn2vn7.png',
+             infoWindow: {
+               content: placeString
+             }
            })
 
            routesInfo.forEach(location => {
@@ -114,13 +105,23 @@
 
                 `
 
+             const product = `
+                    <div>
+                        <div class="col-md-4 ">
+                            <img src="http:${location.href.href}" class="img-responsive">
+                        </div>
+                    <div class="col-md-8 ">
+                        <h4>Description: </h4>${location.name}
+                        <h6>Distance </h6>${location.distance}</div></div>
+                    </div>
+                  `
              map.addMarker({
 
                lat: location.lat,
                lng: location.lon,
                icon: 'https://res.cloudinary.com/picapoll/image/upload/v1497371946/jogging_kmbdhu.png',
                infoWindow: {
-                 content: htmlString
+                 content: product
                }
              })
 

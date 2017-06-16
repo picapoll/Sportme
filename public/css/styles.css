@@ -1,121 +1,27 @@
-
-.navbar-default {
-    margin-bottom: 0px;
+#searchButtons {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -webkit-justify-content: flex-end;
+    justify-content: flex-end;
 }
 
-.navbar-brand {
-  padding: 0px;
-}
-.navbar-brand>img {
-  height: 100%;
-  padding: 15px;
-  width: auto;
-}
-.container-fluid {
-    background: url(../images/bg.jpg) left top repeat;
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    font-weight: 300;
-    color: #888;
-    line-height: 30px;
-    max-width: 100%;
-    height: 86%;
-    margin: 0 auto;
-}
-
-#map_column {
-    padding-right: 1px;
-    padding-left: 0px;
-}
-
-#gmap {
-    height: 100%;
-    width: 100%;
-}
-
-#map {
-    width: 100%;
-    height: 100%;
+#listText {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    /* works with row or column */
+    flex-direction: column;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    margin-top: 15px;
 }
 
 
-
-.controls {
-    margin-top: 10px;
-    border: 1px solid transparent;
-    border-radius: 2px 0 0 2px;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    height: 32px;
-    outline: none;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-}
-
-#searchInput {
-    background-color: #fff;
-    font-family: Roboto;
-    font-size: 15px;
-    font-weight: 300;
-    margin-left: 12px;
-    padding: 0 11px 0 13px;
-    text-overflow: ellipsis;
-    width: 50%;
-}
-
-#searchInput:focus {
-    border-color: #4d90fe;
-}
-
-@font-face {
-    font-family: "ATC Overlook";
-    src: url('../fonts/ATCOverlook-Regular.ttf') format('truetype')/* Safari, Android, iOS */
-}
-
-.navbar {
-    margin-bottom: 0px;
-}
-
-#table_btns {
-    margin-top: 20px;
-}
-
-footer {
-    min-width: 320px;
-    background-color: #333333;
-    color: #fff !important;
-}
-
-footer .wrapper {
-    width: 90%;
-    margin: 0 auto;
-}
-
-footer p {
-    padding: 30px 0;
-    font-weight: 400;
-    text-align: center;
-    margin: 0;
-    text-transform: uppercase;
-    font-family: "ATC Overlook", sans-serif;
-}
-
-footer a {
-    position: relative;
-    margin: 0;
-    padding: 10px 0;
-    transition: all ease-in-out .15s;
-    color: #fff;
-    font-weight: 600;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-footer a:hover {
-    top: -4px;
-    color: #0791d0;
-    text-decoration: none;
-}
-
-footer .footer-icon {
-    color: #ca2027;
+.navbar-default .navbar-brand {
+    color: #333;
+    font-size: 34px;
 }
